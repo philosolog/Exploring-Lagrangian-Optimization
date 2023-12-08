@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e05c921a69863916",
+        "id": "1801fdcfd89f44bf",
         "type": "tabs",
         "children": [
           {
-            "id": "9d9d3a46ce20752b",
+            "id": "4a7c5e1e3cc74d51",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,5 +147,9 @@
     }
   },
   "active": "36d1bb4395cd0aab",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "The Cobb-Douglas Production Function.md",
+    "The Basics of Lagrange Multipliers.md",
+    "README.md"
+  ]
 }
