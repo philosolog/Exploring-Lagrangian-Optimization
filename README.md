@@ -5,3 +5,6 @@ This repository serves to organize the resources that my classmates and I procur
 We decided to study the methods and applications surrounding Lagrangian functions and Lagrange Multipliers.
 
 † By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.
+
+# Ignore below...
+```manim-slides convert lesson main.html -ccontrols=true```
