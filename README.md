@@ -10,3 +10,6 @@ We decided to study the methods and applications surrounding Lagrangian function
 ```console
 manim-slides convert lesson main.html -ccontrols=true
 ```
+```console
+manim-slides wizard
+```
