@@ -11,8 +11,15 @@
             "id": "2ad998acf0d262da",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "presentation.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
+              }
             }
           }
         ]
@@ -81,6 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "presentation.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "presentation.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +127,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "presentation.canvas"
+              }
             }
           }
         ]
@@ -138,8 +149,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2ad998acf0d262da",
+  "active": "cbb5c2b5777007dd",
   "lastOpenFiles": [
+    "The Basics of Lagrange Multipliers.md",
+    "presentation.canvas",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
