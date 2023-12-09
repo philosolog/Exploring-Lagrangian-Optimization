@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "notes/The Cobb-Douglas Production Function.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "notes/The Cobb-Douglas Production Function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "notes/The Cobb-Douglas Production Function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "notes/The Cobb-Douglas Production Function.md"
               }
             }
           }
@@ -148,9 +148,31 @@
   },
   "active": "36d1bb4395cd0aab",
   "lastOpenFiles": [
-    "manim",
+    "presentation/media/texts/47b626b47c0021a4_.svg",
+    "presentation/media/texts/c2d8bfe36a15de91_.svg",
+    "presentation/media/texts/17673ade7c320648_.svg",
+    "presentation/media/texts/1ee973b668d5c192_.svg",
+    "presentation/media/texts/aace58452ec4070f_.svg",
+    "presentation/media/texts/136fa3949c82da16_.svg",
+    "presentation/media/texts/1626c6ca3751675d_.svg",
+    "presentation/media/texts/1f1f87284c168d97_.svg",
+    "presentation/media/texts/d6f14fcb53a45e47_.svg",
+    "presentation/media/texts/3bc18747e543be1a_.svg",
+    "presentation/media/texts/ad58523972d8c64f_.svg",
+    "presentation/slides/ConvertExample.json",
+    "presentation/slides/files/ConvertExample/6b9b998e4578c8ec74af09c73c70686373611cc8e384472016914699c08e4699_reversed.mp4",
+    "presentation/slides/files/ConvertExample/6b9b998e4578c8ec74af09c73c70686373611cc8e384472016914699c08e4699.mp4",
+    "presentation/slides/files/ConvertExample/282b375dd76b80f43b40c26aa2321299b6eaafb5e74fb5bea597e9ab17270b52_reversed.mp4",
+    "presentation/slides/files/ConvertExample/282b375dd76b80f43b40c26aa2321299b6eaafb5e74fb5bea597e9ab17270b52.mp4",
+    "presentation/slides/files/ConvertExample/e0766437f8f3cbf202158f56bd39c809d4bdadb15c91c3a87497d79e5fa6dac0_reversed.mp4",
+    "presentation/slides/files/ConvertExample/e0766437f8f3cbf202158f56bd39c809d4bdadb15c91c3a87497d79e5fa6dac0.mp4",
+    "presentation/slides/files/ConvertExample/49d90ceb95dd0badbdcf57e3ba6a78e442503691141d6114e633fbddd01c2162_reversed.mp4",
+    "presentation/slides/files/ConvertExample/49d90ceb95dd0badbdcf57e3ba6a78e442503691141d6114e633fbddd01c2162.mp4",
+    "presentation/slides/files/ConvertExample/9afec56f98d43064e75f887f0d9cf8e0ae1d9f90d1d5af8e418aed7f3a9ae4fb_reversed.mp4",
+    "notes/The Basics of Lagrange Multipliers.md",
+    "notes/The Cobb-Douglas Production Function.md",
+    "README.md",
     "The Cobb-Douglas Production Function.md",
-    "The Basics of Lagrange Multipliers.md",
-    "README.md"
+    "The Basics of Lagrange Multipliers.md"
   ]
 }
