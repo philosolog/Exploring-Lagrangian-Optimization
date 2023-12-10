@@ -1,5 +1,11 @@
 __pycache__
-**/.DS_Store
+.DS_Store
 media
 slides
 main_assets
+*.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
