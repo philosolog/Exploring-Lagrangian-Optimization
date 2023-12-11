@@ -15,7 +15,7 @@
       \mkern-4mu\diagdown\mkern-5mu
       \raisebox{0.5\faktor@nennerhoehe}{\ensuremath{#1#2{#4}}}
 }
-\newcommand*{\lecturerange}{200}
+\newcommand*{\sectionrange}{200} % *: Tentative
 \makeatother
 \DeclareMathOperator{\Ker}{ker}
 \DeclareMathOperator{\im}{Im}
@@ -26,8 +26,8 @@
 \maketitle
 \newpage
 \tableofcontents
-\foreach \lecturenumber in {1,2,...,\lecturerange}{
-	\edef\FileName{./Sections/Section \lecturenumber.tex}
+\foreach \sectionnumber in {1,2,...,\sectionrange}{
+	\edef\FileName{./Sections/Section \sectionnumber.tex}
 	\IfFileExists{\FileName} {
 		\par
 		\input{\FileName}

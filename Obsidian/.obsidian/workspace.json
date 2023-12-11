@@ -11,14 +11,11 @@
             "id": "2ad998acf0d262da",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "presentation.canvas",
-                "viewState": {
-                  "x": 91.5,
-                  "y": 379.5,
-                  "zoom": 0
-                }
+                "file": "The Cobb-Douglas Production Function.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "presentation.canvas",
+                "file": "The Cobb-Douglas Production Function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "presentation.canvas",
+                "file": "The Cobb-Douglas Production Function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "presentation.canvas"
+                "file": "The Cobb-Douglas Production Function.md"
               }
             }
           }
@@ -149,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2ad998acf0d262da",
+  "active": "cbb5c2b5777007dd",
   "lastOpenFiles": [
     "The Basics of Lagrange Multipliers.md",
     "presentation.canvas",

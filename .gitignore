@@ -9,3 +9,4 @@ main_assets
 *.fls
 *.synctex.gz
 *.toc
+.obsidian
