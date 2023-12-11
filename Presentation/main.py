@@ -1,15 +1,18 @@
 from manim import *
-from manim_slides import Slide, ThreeDSlide
+from manim_slides import ThreeDSlide
 
-class lesson(Slide):
-    def construct(self):
-        circle = Circle(radius=3, color=BLUE)
-        dot = Dot()
+class lesson(ThreeDSlide):
+	def construct(self):
+		self.set_camera_orientation(phi=90*DEGREES, theta=0)
+		box = Prism([2, 3, 2])
+		box.set_color(LIGHT_BROWN)
+		self.play(
+			SpinInFromNothing(box, angle=-135*DEGREES)
+		)
+		self.move_camera(phi=60*DEGREES, theta=0)
+		self.play(
+			Rotating(box, axis=OUT, radians=-150*DEGREES, run_time=2, rate_func=rate_functions.ease_in_out_elastic)
+		)
 
-        self.play(GrowFromCenter(circle))
-
-        self.next_slide(loop=True)
-        self.play(MoveAlongPath(dot, circle), run_time=2, rate_func=linear)
-        
-        self.next_slide()
-        self.play(dot.animate.move_to(ORIGIN))
+		self.next_slide()
+		self.move_camera(frame_center=np.array([0,4,0]))

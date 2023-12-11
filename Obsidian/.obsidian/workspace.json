@@ -15,8 +15,8 @@
               "state": {
                 "file": "presentation.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
+                  "x": 91.5,
+                  "y": 379.5,
                   "zoom": 0
                 }
               }
@@ -149,7 +149,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cbb5c2b5777007dd",
+  "active": "2ad998acf0d262da",
   "lastOpenFiles": [
     "The Basics of Lagrange Multipliers.md",
     "presentation.canvas",
