@@ -28,12 +28,14 @@ class lesson(ThreeDSlide):
 		self.move_camera(frame_center=np.array([0, 4.5, 0]))
 		q1_textbox = Rectangle(width=9, height=2, stroke_width=0).shift(RIGHT*2.5)
 		q1 = self.make_textbox(
-			"We have a piece of cardboard that is 14 inches by 10 inches and we're going to cut out the corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give a maximum volume.",
+			"We have a piece of cardboard that is 69 inches by 420 inches and we're going to cut out the corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give a maximum volume.",
 			q1_textbox
 		)
 		self.add_fixed_in_frame_mobjects(q1)
 		self.play(Write(q1))
 
-		self.next_slide()
-		func = lambda pos: ((pos[0] * UR + pos[1] * LEFT) - pos) / 3
-		self.add(ArrowVectorField(func))
+		self.next_slide(loop=True)
+		self.play(
+			Wiggle(box)
+		)
+		
