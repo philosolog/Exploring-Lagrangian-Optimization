@@ -1,15 +1,21 @@
 {
 	"nodes":[
-		{"id":"88b17ce5d36a287a","type":"text","text":"Add another variable that forces the use of EVT for functions in $\\mathbb{R}^3$. Let the class think about how it changes the problem.","x":-510,"y":110,"width":263,"height":160},
+		{"id":"ee215d163aab3d17","x":-1136,"y":1494,"width":250,"height":60,"type":"text","text":""},
 		{"id":"535e2253339fa3a7","type":"text","text":"Let the class solve a single-variable \noptimization problem.","x":-541,"y":-28,"width":325,"height":94},
-		{"id":"6b413aee33fd9a00","type":"text","text":"Explain and solve using the EVT for functions in $\\mathbb{R}^3$.\n\nNote: Explain why we don't need the second-order partial derivatives for what we want to find.","x":-539,"y":302,"width":323,"height":196},
-		{"id":"044021830ee5b9b1","type":"text","text":"Go into the useful applications of LM.","x":190,"y":531,"width":200,"height":89},
-		{"id":"bce266971b6c0c28","type":"text","text":"Discuss examples with electrical and mechanical engineering.","x":170,"y":687,"width":240,"height":133},
 		{"id":"5590247240ad3a93","type":"text","text":"Introduce Cobb-Douglas optimization. (as the main example)","x":-160,"y":687,"width":250,"height":100},
-		{"id":"d12ed2904ff8770f","type":"text","text":"Now, put a constraint on the variables and let the class ponder.","x":-70,"y":147,"width":320,"height":86},
-		{"id":"cfedc38196ce0e16","type":"text","text":"Take the partial derivatives of the Lagrangian in order to get the \"method of Lagrange multipliers\" for optimization.","x":-70,"y":357,"width":320,"height":116},
-		{"id":"796ee977278ce0c8","type":"text","text":"Introduce Lagrangian functions as the solution.","x":-35,"y":257,"width":250,"height":60},
-		{"id":"dfdfd58a1211d612","type":"text","text":"Go into LNN, then cover backpropagation and modern NN methods.","x":480,"y":687,"width":244,"height":100}
+		{"id":"d12ed2904ff8770f","type":"text","text":"Remove the bounds of the region. Now, put a constraint on the variables and let the class ponder.","x":-70,"y":147,"width":320,"height":86},
+		{"id":"6b413aee33fd9a00","type":"text","text":"Explain and solve using the EVT for functions in $\\mathbb{R}^3$.\n\nNote: Explain why we don't need the second-order partial derivatives for what we want to find.","x":-539,"y":357,"width":323,"height":196},
+		{"id":"88b17ce5d36a287a","type":"text","text":"Add another variable that forces the use of EVT for functions in $\\mathbb{R}^3$. Let the class think about how it changes the problem.","x":-510,"y":127,"width":263,"height":160},
+		{"id":"a191a85bd05ea1eb","type":"text","text":"Changing one of the known side lengths of the cardboard box. And maintaining a bound.","x":-960,"y":36,"width":310,"height":111},
+		{"id":"796ee977278ce0c8","type":"text","text":"Introduce Lagrangian functions as the solution.","x":65,"y":287,"width":250,"height":60},
+		{"id":"044021830ee5b9b1","type":"text","text":"Go into the useful applications of LM.","x":150,"y":509,"width":200,"height":89},
+		{"id":"cfedc38196ce0e16","type":"text","text":"Take the partial derivatives of the Lagrangian in order to get the \"method of Lagrange multipliers\" for optimization.","x":442,"y":339,"width":320,"height":116},
+		{"id":"bce266971b6c0c28","type":"text","text":"Discuss examples with electrical and mechanical engineering.","x":130,"y":721,"width":240,"height":133},
+		{"id":"dfdfd58a1211d612","type":"text","text":"Go into LNN, then cover backpropagation and modern NN methods.","x":420,"y":688,"width":244,"height":100},
+		{"id":"a444e68990f2ea4f","type":"text","text":"too hard to test bounds so resort to LM\n","x":62,"y":-75,"width":380,"height":222},
+		{"id":"24dbdc22d87f73a4","x":-1280,"y":1088,"width":272,"height":52,"type":"text","text":"Introduce optimization in $\\mathbb{R}^2$."},
+		{"id":"5ca61a651ea3fbfc","x":-1273,"y":1200,"width":265,"height":70,"type":"text","text":"Give an example that has to be solved with EVT in $\\mathbb{R}^3$."},
+		{"id":"36cc5417e9b7e848","x":-1220,"y":1376,"width":346,"height":84,"type":"text","text":"Make the endpoints and bounds hard to test, leading to a problem using LM."}
 	],
 	"edges":[
 		{"id":"43b08e82186863f8","fromNode":"535e2253339fa3a7","fromSide":"bottom","toNode":"88b17ce5d36a287a","toSide":"top"},
@@ -17,9 +23,11 @@
 		{"id":"eeb10c02c26f3375","fromNode":"6b413aee33fd9a00","fromSide":"right","toNode":"d12ed2904ff8770f","toSide":"left"},
 		{"id":"95023e3967eff620","fromNode":"d12ed2904ff8770f","fromSide":"bottom","toNode":"796ee977278ce0c8","toSide":"top"},
 		{"id":"11603b7682ea700c","fromNode":"796ee977278ce0c8","fromSide":"bottom","toNode":"cfedc38196ce0e16","toSide":"top"},
-		{"id":"a3dc2f847cc83ad2","fromNode":"cfedc38196ce0e16","fromSide":"bottom","toNode":"044021830ee5b9b1","toSide":"left"},
+		{"id":"a3dc2f847cc83ad2","fromNode":"cfedc38196ce0e16","fromSide":"bottom","toNode":"044021830ee5b9b1","toSide":"top"},
 		{"id":"3e9fcaaedadce6c0","fromNode":"044021830ee5b9b1","fromSide":"bottom","toNode":"5590247240ad3a93","toSide":"top"},
 		{"id":"06e08cac6f3bc8f8","fromNode":"044021830ee5b9b1","fromSide":"bottom","toNode":"bce266971b6c0c28","toSide":"top"},
-		{"id":"571d2ffe6b7e7b60","fromNode":"044021830ee5b9b1","fromSide":"bottom","toNode":"dfdfd58a1211d612","toSide":"top"}
+		{"id":"571d2ffe6b7e7b60","fromNode":"044021830ee5b9b1","fromSide":"bottom","toNode":"dfdfd58a1211d612","toSide":"top"},
+		{"id":"b94042e8cd964555","fromNode":"a191a85bd05ea1eb","fromSide":"right","toNode":"88b17ce5d36a287a","toSide":"left"},
+		{"id":"0c8e08078b7e576d","fromNode":"5590247240ad3a93","fromSide":"left","toNode":"796ee977278ce0c8","toSide":"left"}
 	]
 }
