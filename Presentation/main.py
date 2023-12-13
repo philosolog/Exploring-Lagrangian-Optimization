@@ -27,7 +27,7 @@ class Example_1_1(ThreeDSlide):
 
 		self.next_slide()
 		self.move_camera(frame_center=np.array([0, 4.5, 0]))
-		q1_textbox = Rectangle(width=9, height=2, stroke_opacity=0).shift(RIGHT*2.5)
+		q1_textbox = Rectangle(width=9, height=2, fill_opacity=0, stroke_opacity=0).shift(RIGHT*2.5)
 		q1 = make_textbox(
 			"We have a piece of cardboard that is 2 feet by 4 feet and we're going to cut out the corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give a maximum volume.",
 			q1_textbox
