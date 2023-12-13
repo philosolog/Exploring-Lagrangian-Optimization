@@ -16,24 +16,42 @@ class Example_1_1(ThreeDSlide):
 	def construct(self):
 		self.set_camera_orientation(phi=90*DEGREES, theta=0)
 		box = Prism([2, 4, 0.05]) # TODO: Animate cardboard folding.
+		box_z_offset = -1
+		box.move_to(point_or_mobject=(0, 0, 0.05/2+box_z_offset))
 		box.set_color(DARK_BROWN)
 		self.play(
 			SpinInFromNothing(box, angle=-135*DEGREES)
 		)
 		self.move_camera(phi=60*DEGREES, theta=0)
 		self.play(
-			Rotating(box, axis=OUT, radians=-150*DEGREES, run_time=2, rate_func=rate_functions.ease_in_out_elastic)
+			Rotating(box, axis=OUT, radians=-150*DEGREES, run_time=2, rate_func=rate_functions.ease_in_out_elastic),
 		)
 
 		self.next_slide()
 		self.move_camera(frame_center=np.array([0, 4.5, 0]))
 		q1_textbox = Rectangle(width=9, height=2, fill_opacity=0, stroke_opacity=0).shift(RIGHT*2.5)
 		q1 = make_textbox(
-			"We have a piece of cardboard that is 2 feet by 4 feet and we're going to cut out the corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give a maximum volume.",
+			"We have a 2x4 ft$^2$ cardboard sheet. We're going to cut square corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give its maximum volume.",
 			q1_textbox
 		)
 		self.add_fixed_in_frame_mobjects(q1)
-		self.play(Write(q1))
+		box.generate_target()
+		box.target.stretch_to_fit_depth(1)
+		box.target.move_to(point_or_mobject=(0, 0, 1/2+box_z_offset))
+		self.play(Write(q1), MoveToTarget(box, run_time=1, rate_func=rate_functions.smootherstep))
+		box.generate_target()
+		box.target.stretch_to_fit_depth(0.5)
+		box.target.move_to(point_or_mobject=(0, 0, 0.5/2+box_z_offset))
+		self.play(MoveToTarget(box, run_time=1, rate_func=rate_functions.smootherstep))
+		box.generate_target()
+		box.target.stretch_to_fit_depth(1.5)
+		box.target.move_to(point_or_mobject=(0, 0, 1.5/2+box_z_offset))
+		self.play(MoveToTarget(box, run_time=2, rate_func=rate_functions.smootherstep))
+		box.generate_target()
+		box.target.stretch_to_fit_depth(0.05)
+		box.target.move_to(point_or_mobject=(0, 0, 0+box_z_offset))
+		self.play(MoveToTarget(box, run_time=1, rate_func=rate_functions.smootherstep))
+
 
 		self.next_slide(loop=True)
 		self.play(Wiggle(box))
