@@ -27,13 +27,13 @@ class Example_1_1(ThreeDSlide):
 
 		self.next_slide()
 		self.move_camera(frame_center=np.array([0, 4.5, 0]))
-		q1_textbox = Rectangle(width=9, height=2, stroke_width=0).shift(RIGHT*2.5)
+		q1_textbox = Rectangle(width=9, height=2, stroke_opacity=0).shift(RIGHT*2.5)
 		q1 = make_textbox(
 			"We have a piece of cardboard that is 2 feet by 4 feet and we're going to cut out the corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give a maximum volume.",
 			q1_textbox
 		)
 		self.add_fixed_in_frame_mobjects(q1)
-		self.play(FadeIn(q1))
+		self.play(Write(q1))
 
 		self.next_slide(loop=True)
 		self.play(Wiggle(box))
@@ -51,7 +51,7 @@ class Example_1_2(Slide):
 		self.play(GrowFromPoint(board, board.get_corner(UL)))
 
 		self.next_slide()
-		cuts = [[Square(color=BLACK, fill_opacity=1, stroke_opacity=0).scale(0.5)] for x in range(4)]
+		cuts = [[Square(color=BLACK, fill_opacity=1, stroke_width=0).scale(0.5)] for x in range(4)]
 		cuts[0] += [UL, DR]
 		cuts[1] += [UR, DL]
 		cuts[2] += [DL, UR]
@@ -67,9 +67,9 @@ class Example_1_2(Slide):
 				cut[0].target.scale(scale)
 			self.play(*[MoveToTarget(cuts[x][0]) for x in range(4)])
 		resize_cuts(3/2)
-		self.wait(0.5)
+		self.wait(0.25)
 		resize_cuts(2/3)
-		self.wait(0.2)
+		self.wait(0.1)
 		resize_cuts(2)
-		self.wait(0.3)
+		self.wait(0.15)
 		resize_cuts(1/2)
