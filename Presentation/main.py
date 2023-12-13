@@ -51,11 +51,23 @@ class Example_1_2(Slide):
 		self.play(GrowFromPoint(board, board.get_corner(UL)))
 
 		self.next_slide()
-		cuts = [[Square(color=BLACK, fill_opacity=1, stroke_opacity=0).scale(0.5)]]*4
+		cuts = [[Square(color=BLACK, fill_opacity=1, stroke_opacity=0).scale(0.5)] for x in range(4)]
 		cuts[0] += [UL, DR]
 		cuts[1] += [UR, DL]
 		cuts[2] += [DL, UR]
 		cuts[3] += [DR, UL]
-		for i in range(0):
+		for i in range(4):
 			cuts[i][0].move_to(board.get_corner(cuts[i][1])+cuts[i][0].get_corner(cuts[i][2]))
-			self.play(GrowFromPoint(cuts[i][0], board.get_corner(cuts[i][1]), rate_func=rate_functions.ease_out_elastic, run_time=3))
+		self.play(*[GrowFromPoint(cuts[x][0], board.get_corner(cuts[x][1]), rate_func=rate_functions.smoothererstep, run_time=1) for x in range(4)])
+
+		self.next_slide()
+		def resize_cuts(scale):
+			for cut in cuts:
+				cut[0].generate_target()
+				cut[0].target.scale(scale)
+			self.play(*[MoveToTarget(cuts[x][0]) for x in range(4)])
+		resize_cuts(1.75)
+		self.wait(0.5)
+		resize_cuts(0.75)
+		self.wait(0.2)
+		resize_cuts(1)
