@@ -16,7 +16,7 @@ class Example_1_1(ThreeDSlide):
 	def construct(self):
 		self.set_camera_orientation(phi=90*DEGREES, theta=0)
 		box = Prism([2, 4, 0.05]) # TODO: Animate cardboard folding.
-		box_z_offset = -0.5
+		box_z_offset = -0.25
 		box.move_to(point_or_mobject=(0, 0, 0.05/2+box_z_offset))
 		box.set_color(DARK_BROWN)
 		self.play(
