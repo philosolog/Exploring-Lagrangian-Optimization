@@ -64,7 +64,7 @@ class Example_1_2(Slide):
 		def resize_cuts(scale):
 			for cut in cuts:
 				cut[0].generate_target()
-				cut[0].target.scale(scale)
+				cut[0].target.scale(scale) # TODO: Move along with scaling.
 			self.play(*[MoveToTarget(cuts[x][0]) for x in range(4)])
 		resize_cuts(3/2)
 		self.wait(0.25)
