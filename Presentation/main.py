@@ -44,27 +44,18 @@ class Example_1_1(ThreeDSlide):
 		box.generate_target()
 		box.target.set_color(BLACK)
 		box.target.scale(0)
-		self.play(
-			MoveToTarget(box)
-		)
-		# s1 = Rectangle().scale(0.5)
-		# s2 = Triangle().shift(DOWN + RIGHT).scale(0.5)
-		# c = Cutout(s1, s2, fill_opacity=1, color=BLUE, stroke_color=RED)
-		# self.add_fixed_in_frame_mobjects(c)
-		# self.play(Write(c), run_time=1)
-
+		self.play(MoveToTarget(box))
 class Example_1_2(Slide):
 	def construct(self):
-		board = Rectangle(color=DARK_BROWN, height=2, width=4, fill_opacity=1).scale(2)
+		board = Rectangle(color=DARK_BROWN, height=2, width=4, fill_opacity=1, stroke_opacity=0).scale(2) # TODO: Display cut-edge colors.
+		self.play(GrowFromPoint(board, board.get_corner(UL)))
 
 		self.next_slide()
-		c1 = Square().scale(0.5)
-		c1.move_to(board.get_corner(UL)+c1.get_corner(DR))
-		c2 = Square().scale(0.5)
-		c2.move_to(board.get_corner(UR)+c2.get_corner(DL))
-		c3 = Square().scale(0.5)
-		c3.move_to(board.get_corner(DL)+c3.get_corner(UR))
-		c4 = Square().scale(0.5)
-		c4.move_to(board.get_corner(DR)+c4.get_corner(UL))
-		template = Cutout(board, c1, c2, c3, c4, fill_opacity=1, color=DARK_BROWN, stroke_color=BLUE, stroke_opacity=0.125)
-		self.play(Write(template), run_time=1)
+		cuts = [[Square(color=BLACK, fill_opacity=1, stroke_opacity=0).scale(0.5)]]*4
+		cuts[0] += [UL, DR]
+		cuts[1] += [UR, DL]
+		cuts[2] += [DL, UR]
+		cuts[3] += [DR, UL]
+		for i in range(0):
+			cuts[i][0].move_to(board.get_corner(cuts[i][1])+cuts[i][0].get_corner(cuts[i][2]))
+			self.play(GrowFromPoint(cuts[i][0], board.get_corner(cuts[i][1]), rate_func=rate_functions.ease_out_elastic, run_time=3))

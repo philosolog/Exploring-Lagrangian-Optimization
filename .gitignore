@@ -10,3 +10,4 @@ main_assets
 *.synctex.gz
 *.toc
 .obsidian
+.vscode
