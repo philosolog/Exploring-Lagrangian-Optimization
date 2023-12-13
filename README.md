@@ -8,5 +8,5 @@ We decided to study the methods and applications surrounding Lagrangian function
 
 # Ignore below...
 ```console
-manim-slides convert lesson main.html -ccontrols=true --use-template template.html
+manim-slides convert Example_1_1, Example_1_2 main.html -ccontrols=true --use-template template.html
 ```
