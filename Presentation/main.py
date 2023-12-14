@@ -15,9 +15,9 @@ def make_textbox(str, box):
 class Example_1_1(ThreeDSlide):
 	def construct(self):
 		self.set_camera_orientation(phi=90*DEGREES, theta=0)
-		box = Prism([2, 4, 0.05]) # TODO: Animate cardboard folding.
-		box_z_offset = -1
-		box.move_to(point_or_mobject=(0, 0, 0.05/2+box_z_offset))
+		box = Prism([2, 4, 2]) # TODO: Animate cardboard folding.
+		box_z_offset = -1.5
+		box.move_to(point_or_mobject=(0, 0, 1+box_z_offset))
 		box.set_color(DARK_BROWN)
 		self.play(
 			SpinInFromNothing(box, angle=-135*DEGREES)
@@ -44,12 +44,12 @@ class Example_1_1(ThreeDSlide):
 		box.target.move_to(point_or_mobject=(0, 0, 0.5/2+box_z_offset))
 		self.play(MoveToTarget(box, run_time=1, rate_func=rate_functions.smootherstep))
 		box.generate_target()
-		box.target.stretch_to_fit_depth(1.5)
-		box.target.move_to(point_or_mobject=(0, 0, 1.5/2+box_z_offset))
+		box.target.stretch_to_fit_depth(3.5)
+		box.target.move_to(point_or_mobject=(0, 0, 3.5/2+box_z_offset))
 		self.play(MoveToTarget(box, run_time=2, rate_func=rate_functions.smootherstep))
 		box.generate_target()
-		box.target.stretch_to_fit_depth(0.05)
-		box.target.move_to(point_or_mobject=(0, 0, 0+box_z_offset))
+		box.target.stretch_to_fit_depth(2)
+		box.target.move_to(point_or_mobject=(0, 0, 1+box_z_offset))
 		self.play(MoveToTarget(box, run_time=1, rate_func=rate_functions.smootherstep))
 
 
