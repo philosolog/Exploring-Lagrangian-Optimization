@@ -30,7 +30,7 @@ class Example_1_1(ThreeDSlide):
 
 		q1_textbox = Rectangle(width=9, height=2, fill_opacity=0, stroke_opacity=0).shift(RIGHT*2.5)
 		q1 = make_textbox(
-			"We have a 2x4 ft$^2$ cardboard sheet. We're going to cut square corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give its maximum volume.",
+			"We have a 2 ft by 4 ft cardboard sheet. We're going to cut square corners and fold up the sides to form a box.\\\\\\\\Determine the height of the box that will give its maximum volume.",
 			q1_textbox
 		)
 
@@ -94,7 +94,7 @@ class Example_1_2(Slide):
 				cut[0].generate_target()
 				cut[0].target.scale(scale) # TODO: Move along with scaling.
 			self.play(*[MoveToTarget(cuts[x][0]) for x in range(4)])
-			
+
 		resize_cuts(3/2)
 		self.wait(0.25)
 		resize_cuts(2/3)
