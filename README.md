@@ -6,7 +6,7 @@ To complete the assignment, students may form groups to:
 - produce a written document exploring the topic,
 - and develop a presentation for the class.
 
-My team ([Oliver](https://github.com/aureliusandreas), [Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jadams06), [Kerem](https://github.com/Ottoerm7)) and I decided to dive into the mechanics and applications of Lagrangian functions and Lagrange multipliers. I decided to use GitHub for the version control of this assignment as we develop our assets along our study journey.
+My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jadams06), [Kerem](https://github.com/Ottoerm7), [Oliver](https://github.com/aureliusandreas)) and I decided to dive into the mechanics and applications of Lagrangian functions and Lagrange multipliers. I decided to use GitHub for the version control of this assignment as we develop our assets along our study journey.
 
 † By "research," we refer to the self-education used to assist us in creating a presentation for our class--in no way is it intended that we publish a math paper.
 
