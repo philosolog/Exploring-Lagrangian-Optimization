@@ -11,7 +11,7 @@ My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jada
 **† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.**
 
 # Usage
-To compile the slides:
+Run this in the console to compile the slides:
 ```console
 manim-slides convert Example_1_1 Example_1_2 main.html -ccontrols=true --use-template template.html
 ```
