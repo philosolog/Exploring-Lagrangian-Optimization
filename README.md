@@ -1,5 +1,5 @@
 # What's this?
-A resource compilation for multivariable calculus class' final project: a research† experience where students must design a lesson plan on a math topic and present it to the class.
+A **compilation of resources** for my multivariable calculus class' final project: *a research† experience where students must design a lesson plan on a math topic and present it to the class*.
 
 To complete the assignment, students may form groups to:
 - self-study a topic in mathematics,
@@ -8,7 +8,7 @@ To complete the assignment, students may form groups to:
 
 My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jadams06), [Kerem](https://github.com/Ottoerm7), [Oliver](https://github.com/aureliusandreas)) and I decided to dive into the mechanics and applications of Lagrangian functions and Lagrange multipliers. I decided to use GitHub for the version control & device syncing of our work as we compile our assets.
 
-† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.
+**† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.**
 
 # Usage
 To compile the slides:
