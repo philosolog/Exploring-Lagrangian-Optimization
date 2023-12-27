@@ -8,7 +8,7 @@ To complete the assignment, students may form groups to:
 
 My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jadams06), [Kerem](https://github.com/Ottoerm7), [Oliver](https://github.com/aureliusandreas)) and I decided to dive into the mechanics and applications of Lagrangian functions and Lagrange multipliers. I decided to use GitHub for the version control & device syncing of our work as we compile our assets.
 
-† By "research," we refer to the self-education used to assist us in creating a presentation for our class--in no way is it intended that we publish a math paper.
+† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.
 
 # Usage
 To compile the slides:
