@@ -1,5 +1,5 @@
 # What's this?
-This repository is a compilation of resources designed for my multivariable calculus class' final project: a research† experience where students must design a lesson plan on a math topic and present it to the class.
+A resource compilation for multivariable calculus class' final project: a research† experience where students must design a lesson plan on a math topic and present it to the class.
 
 To complete the assignment, students may form groups to:
 - self-study a topic in mathematics,
