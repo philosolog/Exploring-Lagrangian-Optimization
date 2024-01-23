@@ -1,13 +1,9 @@
 {
 	"nodes":[
-		{"id":"ee215d163aab3d17","type":"text","text":"","x":-1136,"y":1494,"width":250,"height":60},
 		{"id":"d12ed2904ff8770f","type":"text","text":"Remove the bounds of the region. Now, put a constraint on the variables and let the class ponder.","x":-70,"y":147,"width":320,"height":86},
 		{"id":"6b413aee33fd9a00","type":"text","text":"Explain and solve using the EVT for functions in $\\mathbb{R}^3$.\n\nNote: Explain why we don't need the second-order partial derivatives for what we want to find.","x":-539,"y":357,"width":323,"height":196},
 		{"id":"88b17ce5d36a287a","type":"text","text":"Add another variable that forces the use of EVT for functions in $\\mathbb{R}^3$. Let the class think about how it changes the problem.","x":-510,"y":127,"width":263,"height":160},
 		{"id":"a191a85bd05ea1eb","type":"text","text":"Changing one of the known side lengths of the cardboard box. And maintaining a bound.","x":-960,"y":36,"width":310,"height":111,"color":"2"},
-		{"id":"24dbdc22d87f73a4","type":"text","text":"Introduce optimization in $\\mathbb{R}^2$.","x":-1280,"y":1088,"width":272,"height":52},
-		{"id":"5ca61a651ea3fbfc","type":"text","text":"Give an example that has to be solved with EVT in $\\mathbb{R}^3$.","x":-1273,"y":1200,"width":265,"height":70},
-		{"id":"36cc5417e9b7e848","type":"text","text":"Make the endpoints and bounds hard to test, leading to a problem using LM.","x":-1220,"y":1376,"width":346,"height":84},
 		{"id":"a444e68990f2ea4f","type":"text","text":"Display how it is too hard to test the boundary cases, so we have to commit to the method of LM.","x":190,"y":15,"width":352,"height":103,"color":"2"},
 		{"id":"535e2253339fa3a7","type":"text","text":"Let the class solve a single-variable \noptimization problem.","x":-541,"y":-58,"width":325,"height":94,"color":"4"},
 		{"id":"796ee977278ce0c8","type":"text","text":"Introduce Lagrangian functions as the solution.","x":457,"y":426,"width":250,"height":60},

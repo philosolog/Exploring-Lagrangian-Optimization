@@ -2,7 +2,7 @@ from manim import *
 from manim_slides import Slide, ThreeDSlide
 
 def make_textbox(str, box):
-		myBaseTemplate = TexTemplate( # TODO: Make my own preamble...
+		myBaseTemplate = TexTemplate(
 			documentclass="\documentclass[preview]{standalone}"
 		)
 		myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")
