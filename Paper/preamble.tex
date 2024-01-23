@@ -50,68 +50,70 @@
 \tikzset{
 	force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
 }
+
+% *: Theorems
 \makeatother
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
 \theoremstyle{definition}
 \declaretheoremstyle[
-	headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
-	mdframed={
-			linewidth=2pt,
-			rightline=false, topline=false, bottomline=false,
-			linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
-		}
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+    }
 ]{thmgreenbox}
 \declaretheoremstyle[
-	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-	mdframed={
-			linewidth=2pt,
-			rightline=false, topline=false, bottomline=false,
-			linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
-		}
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    }
 ]{thmbluebox}
 \declaretheoremstyle[
-	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-	mdframed={
-			linewidth=2pt,
-			rightline=false, topline=false, bottomline=false,
-			linecolor=NavyBlue
-		}
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue
+    }
 ]{thmblueline}
 \declaretheoremstyle[
-	headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-	mdframed={
-			linewidth=2pt,
-			rightline=false, topline=false, bottomline=false,
-			linecolor=RawSienna, backgroundcolor=RawSienna!5,
-		}
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!5,
+    }
 ]{thmredbox}
 \declaretheoremstyle[
-	headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-	numbered=no,
-	mdframed={
-			linewidth=2pt,
-			rightline=false, topline=false, bottomline=false,
-			linecolor=RawSienna, backgroundcolor=RawSienna!1,
-		},
-	qed=\qedsymbol
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!1,
+    },
+    qed=\qedsymbol
 ]{thmproofbox}
 \declaretheoremstyle[
-	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-	numbered=no,
-	mdframed={
-			linewidth=2pt,
-			rightline=false, topline=false, bottomline=false,
-			linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
-		},
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+    },
 ]{thmexplanationbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
 \declaretheorem[style=thmredbox, name=Proposition]{prop}
@@ -132,10 +134,14 @@
 \newtheorem*{property}{Property}
 \newtheorem*{intuition}{Intuition}
 \usepackage{etoolbox}
-\AtEndEnvironment{vb}{\null\hfill$\diamond$}
-\AtEndEnvironment{intermezzo}{\null\hfill$\diamond$}
-\AtEndEnvironment{opmerking}{\null\hfill$\diamond$}
+\AtEndEnvironment{vb}{\null\hfill$\diamond$}%
+\AtEndEnvironment{intermezzo}{\null\hfill$\diamond$}%
+% \AtEndEnvironment{opmerking}{\null\hfill$\diamond$}%
+% http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
 \makeatletter
+% \def\thm@space@setup{%
+%   \thm@preskip=\parskip \thm@postskip=0pt
+% }
 \def\thm@space@setup{
 	\thm@preskip=\parskip \thm@postskip=0pt
 }
@@ -146,6 +152,7 @@
 \newcommand{\subexample}[1]{
 	\subsubsection*{Example \@example.#1}
 }
+
 \usepackage{xifthen}
 \def\testdateparts#1{\dateparts#1\relax}
 \def\dateparts#1\relax{
@@ -214,3 +221,5 @@
 	Oliver\\
 	\texttt{@aureliusandreas}
 } % TODO: Per-author credits?
+
+\usepackage{lipsum}
