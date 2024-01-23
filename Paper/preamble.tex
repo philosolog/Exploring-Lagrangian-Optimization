@@ -34,7 +34,7 @@
 \newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
 \newcommand\green[1]{{\color{correct}{#1}}}
 \newcommand\hr{
-    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+	\noindent\rule[0.5ex]{\linewidth}{0.5pt}
 }
 \newcommand\hide[1]{}
 \usepackage{siunitx}
@@ -48,7 +48,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.13}
 \tikzset{
-    force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
+	force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
 }
 \makeatother
 \usepackage{thmtools}
@@ -56,55 +56,55 @@
 \mdfsetup{skipabove=1em,skipbelow=0em}
 \theoremstyle{definition}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
-    }
+	headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+		}
 ]{thmgreenbox}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
-    }
+	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+		}
 ]{thmbluebox}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue
-    }
+	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=NavyBlue
+		}
 ]{thmblueline}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!5,
-    }
+	headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=RawSienna, backgroundcolor=RawSienna!5,
+		}
 ]{thmredbox}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-    numbered=no,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!1,
-    },
-    qed=\qedsymbol
+	headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+	numbered=no,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=RawSienna, backgroundcolor=RawSienna!1,
+		},
+	qed=\qedsymbol
 ]{thmproofbox}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-    numbered=no,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
-    },
+	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+	numbered=no,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+		},
 ]{thmexplanationbox}
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
@@ -137,28 +137,35 @@
 \AtEndEnvironment{opmerking}{\null\hfill$\diamond$}
 \makeatletter
 \def\thm@space@setup{
-  \thm@preskip=\parskip \thm@postskip=0pt
+	\thm@preskip=\parskip \thm@postskip=0pt
 }
 \newcommand{\example}[1]{
-    \def\@example{#1}
-    \subsection*{Example #1}
+	\def\@example{#1}
+	\subsection*{Example #1}
 }
 \newcommand{\subexample}[1]{
-    \subsubsection*{Example \@example.#1}
+	\subsubsection*{Example \@example.#1}
 }
 \usepackage{xifthen}
 \def\testdateparts#1{\dateparts#1\relax}
 \def\dateparts#1\relax{
-    \marginpar{\small\textsf{\mbox{#1}}}
+	\marginpar{\small\textsf{\mbox{#1}}}
 }
-\def\@lesson{} % TODO: Fix issue with misaligned new sections.
+\def\@lesson{}
 \newcommand{\lesson}[3]{
-    \ifthenelse{\isempty{#3}}{
-        \def\@lesson{Section #1}
-    }{
-        \def\@lesson{Section #1: #3}
-    }
-    \subsection*{\@lesson}
+	\ifthenelse{\isempty{#3}}{
+		\def\@lesson{Section #1}
+	}{
+		\newpage
+		\def\@lesson{
+			\vfill
+			\begin{center}
+				Section #1: #3 % TODO: Bold it lol...
+			\end{center}
+			\vfill
+		}
+	}
+	\subsection*{\@lesson}
 	\testdateparts{#2}
 }
 \makeatother
@@ -166,29 +173,29 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{breakable}
 \newenvironment{verbetering}{\begin{tcolorbox}[
-    arc=0mm,
-    colback=white,
-    colframe=green!60!black,
-    title=Opmerking,
-    fonttitle=\sffamily,
-    breakable
-]}{\end{tcolorbox}}
+			arc=0mm,
+			colback=white,
+			colframe=green!60!black,
+			title=Opmerking,
+			fonttitle=\sffamily,
+			breakable
+		]}{\end{tcolorbox}}
 \newenvironment{noot}[1]{\begin{tcolorbox}[
-    arc=0mm,
-    colback=white,
-    colframe=white!60!black,
-    title=#1,
-    fonttitle=\sffamily,
-    breakable
-]}{\end{tcolorbox}}
+			arc=0mm,
+			colback=white,
+			colframe=white!60!black,
+			title=#1,
+			fonttitle=\sffamily,
+			breakable
+		]}{\end{tcolorbox}}
 \usepackage{import}
 \usepackage{xifthen}
 \pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
 \newcommand{\incfig}[1]{
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
 }
 \pdfsuppresswarningpagegroup=1
 \author{
@@ -206,4 +213,4 @@
 	\and
 	Oliver\\
 	\texttt{@aureliusandreas}
-}
+} % TODO: Per-author credits?
