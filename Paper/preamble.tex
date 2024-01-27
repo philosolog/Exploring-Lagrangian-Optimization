@@ -126,7 +126,6 @@
 \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
 \declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
 \declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
-\newtheorem*{uovt}{UOVT}
 \newtheorem*{notation}{Notation}
 \newtheorem*{previouslyseen}{As previously seen}
 \newtheorem*{problem}{Problem}
@@ -166,8 +165,9 @@
 		\newpage
 		\def\@lesson{
 			\vfill
+			\Large
 			\begin{center}
-				Section #1: #3 % TODO: Bold it lol...
+				Section #1: #3
 			\end{center}
 			\vfill
 		}
@@ -220,6 +220,6 @@
 	\and
 	Oliver\\
 	\texttt{@aureliusandreas}
-} % TODO: Per-author credits?
+}
 
 \usepackage{lipsum}
