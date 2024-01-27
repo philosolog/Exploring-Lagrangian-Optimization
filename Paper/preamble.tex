@@ -160,7 +160,14 @@
 \def\@lesson{}
 \newcommand{\lesson}[3]{
 	\ifthenelse{\isempty{#3}}{
-		\def\@lesson{Section #1}
+		\def\@lesson{
+			\vfill
+			\Large
+			\begin{center}
+				Section #1
+			\end{center}
+			\vfill
+		}
 	}{
 		\newpage
 		\def\@lesson{
@@ -206,20 +213,21 @@
 }
 \pdfsuppresswarningpagegroup=1
 \author{
-	Aaron\\
+	\textbf{Aaron}\\
 	\texttt{@philosolog}
 	\and
-	Brennan\\
+	\textbf{Brennan}\\
 	\texttt{@Brensum}
 	\and
-	Jordan\\
+	\textbf{Jordan}\\
 	\texttt{@Jadams06}
 	\and
-	Kerem\\
+	\textbf{Kerem}\\
 	\texttt{@Ottoerm7}
 	\and
-	Oliver\\
+	\textbf{Oliver}\\
 	\texttt{@aureliusandreas}
 }
 
 \usepackage{lipsum}
+\def\bsq#1{\lq{#1}\rq}
