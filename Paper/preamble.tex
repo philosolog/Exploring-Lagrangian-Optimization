@@ -114,8 +114,8 @@
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-\declaretheorem[style=thmgreenbox, name=Definition]{definition}
-\declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
+\declaretheorem[style=thmgreenbox, name=Definition]{definition} % TODO: Orange?
+\declaretheorem[style=thmbluebox, numbered=yes, name=Example]{eg}
 \declaretheorem[style=thmredbox, name=Proposition]{prop}
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[style=thmredbox, name=Lemma]{lemma}
@@ -124,8 +124,8 @@
 \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 \declaretheorem[style=thmexplanationbox, name=Proof]{tmpexplanation}
 \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
-\declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
-\declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
+\declaretheorem[style=thmgreenbox, numbered=no, name=Remark]{remark}
+\declaretheorem[style=thmblueline, numbered=no, name=Note]{note} % TODO: Yellow
 \newtheorem*{notation}{Notation}
 \newtheorem*{previouslyseen}{As previously seen}
 \newtheorem*{problem}{Problem}
@@ -231,3 +231,4 @@
 
 \usepackage{lipsum}
 \def\bsq#1{\lq{#1}\rq}
+\setlength{\lineskip}{5pt}
