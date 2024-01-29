@@ -23,8 +23,35 @@ If he's only considering sweetness $(s)$ as a factor of his satisfaction, then h
 % *: 
 \setcounter{chapter}{1}
 \chapter{Utilmaxxing}
-% Denote that optimization is a concept where the derivative equals 0- and state its importance for later.
-
 \begin{theorem}[$^{*}$The Extreme Value Theorem in $\mathbb{R}^2$]
 	Suppose that \(f\left( x \right)\) is continuous on the interval \(\left[ {a,b} \right]\) then there are two numbers \(a \le c,d \le b\) so that \(f\left( c \right)\) is an absolute maximum for the function and \(f\left( d \right)\) is an absolute minimum for the function.
 \end{theorem}
+
+Restated, the Extreme Value Theorem (EVT) in $\mathbb{R}^2$ guarantees for any absolute (global) maximum and minimum value for any closed-continuous interval on a function.
+In differential calculus, this would imply that we need to compare the endpoints of the closed interval with the local extrema of the function.
+
+Critical numbers (values) can represent local extrema or inflection points, but we will only consider them as local extrema for the following example.
+The critical values of the function denote where the function's derivative equals $0$.
+Keep this single variable function concept in mind, as it is important for later.
+Let's help Joe find his maximum util!
+
+Because $e^x$ is continuous for all $x$, we can apply the EVT to $S$ for $s\in[1, 5]$.
+\begin{align*}
+	S'(s)=-\frac{1}{4}(s-4)e^{-\frac{(s-4)^2}{64}}=0\\
+	\implies e^{-\frac{(s-4)^2}{64}}=0\text{; }s-4=0
+\end{align*}
+Since $e^x > 0$ for all $x$, we can omit the first equation, giving us:
+\begin{align*}
+	s = 4
+\end{align*}
+Let's find its corresponding $S$ value...
+\begin{align*}
+	S(4) = 8e^{-\frac{(4-4)^2}{64}} = 8
+\end{align*}
+Now, we must test the $S$ values for the end values of the interval:
+\begin{align*}
+	S(1) = 8e^{-\frac{(1-4)^2}{64}} \approx 6.95052\\
+	S(5) = 8e^{-\frac{(5-4)^2}{64}} \approx 7.87597
+\end{align*}
+
+Because $\max(S(1), S(4), S(5)) = S(4) = 8$, Joe can attain his maximum satisfaction with $\boxed{4\text{ units of sweetness}}$.
