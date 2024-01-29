@@ -134,7 +134,7 @@ Doing a bit of algebra yields us with the following:
 \end{align*}
 So, we end up with the critical point $(2, 1)$.
 
-Now, we have to find the absolute extrema on the bounds (which we'll infer from the problem statement)!
+Now, we have to find the absolute extrema candidates on the bounds (which we'll infer from the problem statement)!
 \begin{enumerate}
 	\item $y\leq 5-x^2$
 	\item $y\geq 0$
@@ -145,17 +145,46 @@ For $1$:
 	f(x, 5-x^2) &= x^2-(5-x^2)^2+x(5-x^2)-5x\\
 	&= -x^4-x^3+11x^2-25
 \end{align*}
-Find the local extrema for $1$:
+Find the critical values for $1$:
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{d}x}[f(x, 5-x^2)] = -4x^3-3x^2+22x&=0\\
+	\implies x&\in \left\{-\frac{11}{4}, 0, 2\right\}
+\end{align*}
+And their implied points:
+\begin{align*}
+	\implies \left\{\left(-\frac{11}{4}, -\frac{41}{16}\right), (0, 5), (2, 1)\right\}
+\end{align*}
+Note that we can omit $\left(-\frac{11}{4}, -\frac{41}{16}\right)$ because it provides a $y$-value that does not follow relation \#$2$.
+We can also ignore the repeated $(2, 1)$ because it already appeared when we used partial derivatives to find the critial point of $f$.
 
 Now for $2$:
-
-Find its local extrema:
-
-Then, find and test the corner points:
-
 \begin{align*}
-	f(x, 0) = x^2-5x
+	f(x, 0) &= x^2-5x\\
 \end{align*}
+Find its critical values:
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{d}x}[f(x, 0)] = 2x-5&=0\\
+	\implies x&=\frac{5}{2}
+\end{align*}
+And its implied point:
+\begin{align*}
+	\implies \left(\frac{5}{2}, 0\right)
+\end{align*}
+Then, find the corner points:
+\begin{align*}
+	0 = 5-x^2\implies x\in\{-\sqrt{5}, \sqrt{5}\}
+	\implies \{(-\sqrt{5}, 0), (\sqrt{5}, 0)\}
+\end{align*}
+And, finally, we must compare the $f$ values for all found points:
+\begin{align*}
+	f(2, 1) &= -5\\
+	f(0, 5) &= -25\\
+	f\left(\frac{5}{2}, 0\right) = -\frac{25}{4} &\approx -6.25\\
+	f(-\sqrt{5}, 0) = 5+5\sqrt{5} &\approx 16.18034\\
+	f(\sqrt{5}, 0) = 5-5\sqrt{5} &\approx -6.18034
+\end{align*}
+The amount of work that went into this problem is absurd, but that's fine. In the end, we find that the absolute minimum of $f$ is $-25$ and the absolute maximum is $5+5\sqrt{5}$, or $16.18034$.
+
 % TODO: More applications...
 Now wait a second.. what would happen if the $2$D region describing the input of the $3$D function.. is not bounded?
 Obviously, we can't apply the Extreme Value Theorem in $\mathbb{R}^3$ in this case.. unless you know how to test all possible points on an unbounded region!
