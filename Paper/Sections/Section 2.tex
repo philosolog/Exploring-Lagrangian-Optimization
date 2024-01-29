@@ -34,8 +34,8 @@ If the latter case suffices, the EVT states that there exists absolute extrema f
 Firstly, we have to find the $3$D critical points for the function $S$.
 In order to do this, we must find where the partial derivatives of the function equal zero.
 \begin{align*}
-	\frac{\partial}{\partial s} = -\frac{1}{4}(u-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}}=0\\
-	\frac{\partial}{\partial u} = -\frac{1}{4}(s-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}}=0
+	\frac{\partial}{\partial s}[S(s, u)] = -\frac{1}{4}(u-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}}=0\\
+	\frac{\partial}{\partial u}[S(s, u)] = -\frac{1}{4}(s-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}}=0
 \end{align*}
 From a similar expression (see Chapter 2, Utilmaxxing), we can simplify this to see that:
 \begin{align*}
@@ -85,7 +85,7 @@ Doing a bit of algebra (or not.. for the first two relations) to find the comple
 	\item $u\geq 0\implies (4, 0)$
 	\item $s+u\leq 16\implies (8, 8)$
 \end{enumerate}
-
+% TODO: CORNER POINTS LMFAO UH... Also, add graphs...
 Finally, we can compare the found points' satisfaction outputs...
 \begin{center}
 	$S(4, 4) = 8$\\
@@ -95,8 +95,10 @@ Finally, we can compare the found points' satisfaction outputs...
 \end{center}
 
 Through all of this work, we found that Joe can still only achieve a maximum satisfaction of $8$ utils!
+
 Do note that, unlike when sweetness was the only option in the $\mathbb{R}^2$ case, Joe does not just want either all sweetness or all umami.
 Also note that this is NOT a pattern that holds true for all functions you decide to optimize using the EVT in $\mathbb{R}^3$.
+
 To make this more clear, let's reiterate this multivariable problem-solving concept with another problem.. in the next chapter!
 % *: 
 \setcounter{chapter}{4}
@@ -109,4 +111,54 @@ Now, let's try a general example that requires the application of the Extreme Va
 	\end{center}
 	on the region bounded by $y = 5 - x^2$ and the $x$-axis.
 \end{eg}
+
+Like when we had to find Joe's maximum satisfaction, we can apply the same techniques!
+
+First, we must find the critical points for $f$, so we set its partial derivatives equal to zero:
+\begin{align*}
+	f_x(x,y)=2x+y-5&=0\\
+	f_y(x,y)=-2y+x&=0
+\end{align*}
+Then, we solve the system of two equations for two unknowns.
+
+Here, we'll use elimination:
+\begin{align*}
+	4x+2y&=10\\
+	-2y+x&=0\\
+	\implies 5x&=10\\
+	x&=2
+\end{align*}
+Doing a bit of algebra yields us with the following:
+\begin{align*}
+	y=1
+\end{align*}
+So, we end up with the critical point $(2, 1)$.
+
+Now, we have to find the absolute extrema on the bounds (which we'll infer from the problem statement)!
+\begin{enumerate}
+	\item $y\leq 5-x^2$
+	\item $y\geq 0$
+\end{enumerate}
+
+For $1$:
+\begin{align*}
+	f(x, 5-x^2) &= x^2-(5-x^2)^2+x(5-x^2)-5x\\
+	&= -x^4-x^3+11x^2-25
+\end{align*}
+Find the local extrema for $1$:
+
+Now for $2$:
+
+Find its local extrema:
+
+Then, find and test the corner points:
+
+\begin{align*}
+	f(x, 0) = x^2-5x
+\end{align*}
 % TODO: More applications...
+Now wait a second.. what would happen if the $2$D region describing the input of the $3$D function.. is not bounded?
+Obviously, we can't apply the Extreme Value Theorem in $\mathbb{R}^3$ in this case.. unless you know how to test all possible points on an unbounded region!
+Which, unfortunately, you can't.
+
+Instead, read on...
