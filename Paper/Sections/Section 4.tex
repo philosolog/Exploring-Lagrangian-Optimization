@@ -1,29 +1,60 @@
 \lesson{4}{}{The Cobb-Douglas Production Function}
-\setcounter{chapter}{7}
+% *: 
+\setcounter{chapter}{8}
 \chapter{Carl's Parlor}
-After Joe decided to buy everything from Carl's Parlor, Carl-Friedrich decided to not accept anymore customers until the icecream and chicken dispensers were refilled.
-Also, Carl was the only worker at his icecream shop, so he is interested in hiring more workers.
+After Joe decided to buy everything from Carl's Parlor, Carl-Friedrich decided to not accept anymore customers until the ice cream and chicken dispensers were refilled.
+Also, Carl was the only worker at his ice cream shop, so he is interested in hiring more workers.
 
 To financially plan these business plans, Carl viewed a couple YouTube videos on the \textbf{Cobb-Douglas production function}.
 \begin{remark}
 	The Cobb-Douglas production function is an economics concept that relates a firm's production output $Y$ in terms of two variable inputs, labor $(L)$ and capital $(K)$.
 
 	The production function can be written as:
-	\[Y(L, K) = AL^{\alpha}K^{1 - \alpha}\]
+	\begin{center}
+		$Y(L, K) = AL^{\alpha}K^{\beta}$
+	\end{center}
 	Where..
 	\begin{itemize}
 		\item A is a constant for \textit{$^\ddagger$total-factor productivity},
-		\item and $\alpha$ is a constant for \textit{$^\ddagger$output elasticity of labor}
+		\item $\alpha$ is a constant for \textit{$^\ddagger$output elasticity of labor},
+		\item and $\beta$ is a constant for \textit{$^\ddagger$output elasticity of capital}.
 	\end{itemize}
-	If there are any constraints on the variables $L$ and $K$, like a budget, then the method of Lagrange multipliers can be utilized to find the specific quantities of capital and labor that maximizes output $Y(L, K)$ for constraint functions.
 
 	$^\ddagger$ For the sake of keeping this paper focused on constraining the Cobb-Douglas production function, we will not derive these economic concepts.
+	For the following example problems, we will make the following simplification: \[\beta = 1 - \alpha\]
+	This derives from the economic concept of $^1$elasticity that we will only briefly describe in the footnotes.% TODO: Fact-check me on the terms lol...
 \end{remark}
 
-Right now, Carl is eyeing multi-purpose dispenser machines that are worth around $\$1,500$ and 
-\[\]
-\setcounter{chapter}{8}
-\chapter{Money-Mouth Face Emoji}
+Right now, Carl is eyeing some refurbished multi-purpose dispenser machines with individual maintenance costs at around $\$1,500$ per year.
+He is also looking to hire workers that will have to be paid $\$30,000$ a year.
 
+Carl has rich parents, but he still has a budget.
+He wants to spend no more than $\$100,000$ a year on his ice cream parlor.
+In Carl's world, ice cream parlors can be found to have a production function similar to:\par
+\LARGE
+\begin{equation}
+	Y(L, K) = L^{0.35}K^{0.65}
+\end{equation}
+\normalsize
+\begin{eg}
+	With the production function given above, Carl wants to find an optimal combination of capital and labor that maximizes his parlor's output while also considering his budget.
+
+	Can you help him find such combination?
+\end{eg}
+% *: 
 \setcounter{chapter}{9}
-\chapter{Metonymization, Part 2}
+\chapter{Money-Mouth Face Emoji}
+If there are any constraints on the variables $L$ and $K$, like a budget, then the method of Lagrange multipliers can be utilized to find the specific quantities of capital and labor that maximizes output $Y(L, K)$ for constraint functions.
+% *: 
+\setcounter{chapter}{10}
+\chapter{Metonymization, Part 3}
+As shown in the above example, the method of Lagrange multipliers can be applied to the Cobb-Douglas production function to find the specific quantities of labor and capital that maximizes production output for given constraints on both labor and capital.
+
+To relate this to a generalized case, here's another example!
+\begin{eg}
+	Suppose you are given a specific Cobb-Douglas function \[f(x, y) = 50x^{0.4}y^{0.6}\] where $x$ is the dollar amount spent on labor and $y$ the dollar amount spent on equipment.
+	
+	Use the method of Lagrange multipliers to determine how much should be spend on labor and how much on equipment to maximize productivity if we have a total of 1.5 million dollars to invest in labor and equipment.
+	
+	There could be a slight error in the example, which will be included in the Concluding Remarks section. But because we were given this example problem as a requirement for this paper, we kept it ad litteram.
+\end{eg}
