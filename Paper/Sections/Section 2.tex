@@ -23,10 +23,46 @@ Joe's satisfaction $S$ can now be represented in terms of sweetness $(s)$ and um
 \end{eg}
 
 \setcounter{chapter}{3}
-\chapter{Nerd Face Emoji} % From Mr. Barraza's class, lol... Also, add emojis here...
-\begin{theorem}[$^\dagger$The Extreme Value Theorem in $\mathbb{R}^3$]
-	
+\chapter{Nerd Face Emoji}
+Being the second-to-highest-gold-star-sticker student in Mr. Barraza's multivariable calculus class, Joe figured that he would have to use the \textbf{Extreme Value Theorem in $\mathbb{R}^3$} to solve this problem.
+\begin{theorem}[The Extreme Value Theorem in $\mathbb{R}^3$, Paul's Online Notes]
+	If \(f\left( {x,y} \right)\) is continuous in some closed, bounded set \(D\) in \({\mathbb{R}^2}\) then there are points in \(D\), \(\left( {{x_1},{y_1}} \right)\) and \(\left( {{x_2},{y_2}} \right)\) so that \(f\left( {{x_1},{y_1}} \right)\) is the absolute maximum and \(f\left( {{x_2},{y_2}} \right)\) is the absolute minimum of the function in \(D\).
 \end{theorem}
+The EVT in $\mathbb{R}^3$ is similar to the EVT in $\mathbb{R}^2$ except that, in order for the theorem to apply, the inputs $(x, y)$ to a $\mathbb{R}^2$ function $f$ must exist in a closed and bounded region.
+If the latter case suffices, the EVT states that there exists absolute extrema for a function $f$ in such region.
+
+Firstly, we have to find the $3$D critical points for the function $S$.
+In order to do this, we must find where the partial derivatives of the function equal zero.
+\begin{align*}
+	\frac{\partial}{\partial s} = -\frac{1}{4}(u-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}}=0\\
+	\frac{\partial}{\partial u} = -\frac{1}{4}(s-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}}=0
+\end{align*}
+From a similar expression (see Chapter 2, Utilmaxxing), we can simplify this to see that:
+\begin{align*}
+	s = 4\text{; }u = 4
+\end{align*}
+Doing some algebra and finding the corresponding values for each variable's solution in $(s, u)$ will yield one critical point solution, $(4, 4)$.
+
+Then, we have to test for points of absolute extrema on the bounds of the region.
+Here, we'll use what we know about the EVT in $\mathbb{R}^2$ to test for absolute extrema.
+Though, we must first describe the bounding functions!
+
+The problem implies the following relations:
+\begin{enumerate}
+	\item $s\geq 0$
+	\item $u\geq 0$
+	\item $s+y\leq 16$
+\end{enumerate}
+
+To find a single variable function for each bound, given the satisfaction function, we must make some substitutions at the extreme/boundary cases...
+\begin{center}
+	$(s=0\text{; }u=0\text{; }s+u=16)$
+\end{center}
+
+For relation $1$, we get:
+\begin{align*}
+	S(0, s) = 8e^{-\frac{(-4)^2+(u-4)^2}{64}}
+\end{align*}
 % *: 
 \setcounter{chapter}{4}
 \chapter{Metonymization, Part 1}
