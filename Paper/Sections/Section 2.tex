@@ -51,18 +51,53 @@ The problem implies the following relations:
 \begin{enumerate}
 	\item $s\geq 0$
 	\item $u\geq 0$
-	\item $s+y\leq 16$
+	\item $s+u\leq 16$
 \end{enumerate}
 
 To find a single variable function for each bound, given the satisfaction function, we must make some substitutions at the extreme/boundary cases...
 \begin{center}
 	$(s=0\text{; }u=0\text{; }s+u=16)$
 \end{center}
-
+% TODO: Find a way to use multiple alignments for the following equation mess, lol...
 For relation $1$, we get:
 \begin{align*}
-	S(0, s) = 8e^{-\frac{(-4)^2+(u-4)^2}{64}}
+	S(0, u)&=8e^{-\frac{(-4)^2+(u-4)^2}{64}}\\
+	\implies \frac{\mathrm{d}}{\mathrm{d}u}[S(0,u)]&=-\frac{1}{4}(u-4)e^{-\frac{(u-4)^2}{64}-\frac{1}{4}}=0\\
+	\implies u&=4
 \end{align*}
+Regarding relation $2$:
+\begin{align*}
+	S(s, 0)&=8e^{-\frac{(s-4)^2+(-4)^2}{64}}\\
+	\implies \frac{\mathrm{d}}{\mathrm{d}s}[S(s,0)]&=-\frac{1}{4}(s-4)e^{-\frac{(s-4)^2}{64}-\frac{1}{4}}=0\\
+	\implies s&=4
+\end{align*}
+And lastly, relation $3$:
+\begin{align*}
+	S(s, 16-s)&=8e^{-\frac{(s-4)^2+(12-s)^2}{64}}\\
+	\frac{\mathrm{d}}{\mathrm{d}s}[S(s,16-s)]&=-\frac{1}{2}(s-8)e^{-\frac{s^2}{32}+\frac{s}{2}-\frac{5}{2}}=0\\
+	\implies s&=8
+\end{align*}
+
+\pagebreak
+Doing a bit of algebra (or not.. for the first two relations) to find the complement in each coordinate pair using the solved values just above, we get:
+\begin{enumerate}
+	\item $s\geq 0\implies (0, 4)$
+	\item $u\geq 0\implies (4, 0)$
+	\item $s+u\leq 16\implies (8, 8)$
+\end{enumerate}
+
+Finally, we can compare the found points' satisfaction outputs...
+\begin{center}
+	$S(4, 4) = 8$\\
+	$S(0, 4) = \frac{8}{\sqrt[4]{e}}\approx 6.23041$\\
+	$S(4, 0) = \frac{8}{\sqrt[4]{e}}\approx 6.23041$\\
+	$S(8, 8) = \frac{8}{\sqrt{e}}\approx 4.85225$
+\end{center}
+
+Through all of this work, we found that Joe can still only achieve a maximum satisfaction of $8$ utils!
+Do note that, unlike when sweetness was the only option in the $\mathbb{R}^2$ case, Joe does not just want either all sweetness or all umami.
+Also note that this is NOT a pattern that holds true for all functions you decide to optimize using the EVT in $\mathbb{R}^3$.
+To make this more clear, let's reiterate this multivariable problem-solving concept with another problem.. in the next chapter!
 % *: 
 \setcounter{chapter}{4}
 \chapter{Metonymization, Part 1}
