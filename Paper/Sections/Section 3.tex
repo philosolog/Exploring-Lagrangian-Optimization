@@ -1,23 +1,71 @@
 \lesson{3}{}{The Method of Lagrange Multipliers}
 % *: 
 \setcounter{chapter}{5}
-\chapter{Another Order} % TODO: #
+\chapter{Another Order}
 Delightful! Joe greatly enjoyed the addition of meat- the piquant umami was a new experience for his buds.
 
 Despite already heightening his satisfaction twice, Joe was yet again deciding on another combination of a meat-topped ice cream.
 This time, his only constraint is that he wants the umami flavor to be inversely proportional to half the sweetness felt.
-\begin{eg} % TODO: Linked ref.
+\begin{eg}
 	Given that his satisfaction can again be represented by eq. (3.1), Joe desires for a nonnegative amount of each flavor and wants to try a combination where the flavor of umami he attains is inversely proportional to half the sweetness.
 
-	With what combination of $(u, s)$ can Joe attain his maximum satisfaction?
+	Can you find a combination of $(s, u)$ where Joe can attain his maximum satisfaction?
 \end{eg}
 % *: 
 \setcounter{chapter}{6}
 \chapter{A Joe Analysis}
-% TODO: Here, show that LM can be applied but EVT cannot- with a geometric proof instead of the disgusting algebra.
+To solve this problem, we must utilize Lagrange multipliers in order to find the extrema of an arbitrary function $f$ constrained by another function that we'll call $g$.
+
+The method of Lagrange multipliers for solving constrained optimization problems utilizes the following formula:
+\large
+\begin{equation}
+	\vec{\nabla}f(x, y) = \lambda \vec{\nabla}g(x, y)
+\end{equation}
+\normalsize
+In the above equation, $\vec{\nabla}$ represents the gradient operator on a function, which produces a vector where each component represents the partial derivative of the function with respect to the corresponding variable.
+This formula displays that the gradient vector of $f$ is equal to the gradient vector of $g$ times an unknown multiple $\lambda$.
+$\lambda$ is called a Lagrange multiplier and helps constrain our possible solutions such that $f$ is a multiple of $g$.
+If we were to separate this vector equation into partially differentiated functions with respect to either $x$ and $y$ components, we'd get the following equations:
+\begin{center}
+	$f_x=\lambda g_x$\\
+	$f_y=\lambda g_y$
+\end{center}
+Upon solving for $x$ and $y$ in this equation, you'd get the values of $x$ and $y$ that are candidates for absolute extrema outputs of the function $f$.
+Now, let's help Joe.
+
+\pagebreak
+We are tasked with optimizing a function $S$ constrained to $u=\frac{2}{s}$. We can describe our constraint function $g$ to be:
+\begin{equation}
+	g(s, u) = su-2
+\end{equation}
+Taking some partial derivatives and rewriting the vectors to be equations for each component:
+\begin{align*}
+	-\frac{1}{4}(u-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}} &= \lambda u\\
+	-\frac{1}{4}(s-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}} &= \lambda s
+\end{align*}
+Okay, we have $3$ unknowns.. but only $2$ equations.
+To address this, we will utilize our constraint equation.
+\begin{align*}
+	-\frac{1}{4}(u-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}} &= \lambda u\\
+	-\frac{1}{4}(s-4)e^{-\frac{(s-4)^2+(u-4)^2}{64}} &= \lambda s\\
+	su = 2
+\end{align*}
+Now, we can use basic algebra to find solutions for $(s, u, \lambda)$. Because we are only concerned with which $(s, u)$ that produce the maximum $S$ for Joe, we will ignore using $\lambda$ once found.
+
+Because the algebra will be gruesome to type out for this calculus-based research paper, here is the solution for $(s, u)$:
+\begin{align*}
+	\left(\frac{8}{(2\sqrt{2}-1)e^{\frac{1}{2\sqrt{2}}-\frac{9}{16}}}, \frac{1}{4}(2\sqrt{2}-1)e^{\frac{1}{2\sqrt{2}}-\frac{9}{16}}\right) \approx (5.39208, 0.37091)
+\end{align*}
+If you were to do this by hand, you'd find a solution with a $u$ value that is less than $0$.
+Because Joe wants a nonnegative amount of each flavor, we can omit the corresponding solution.
 % *: 
 \setcounter{chapter}{7}
 \chapter{Metonymization, Part 2} % Is there a better to word "an off-example"?
+The method of Lagrange multipliers for constrained optimization is useful for finding where the extrema of $3$D functions occur, especially if the constraint functions are unbounded.
+This is because the method utilizing EVT in $\mathbb{R}^3$, as mentioned in a previous chapter, cannot suffice for unbounded constraints.
+Do note that the method of Lagrange multipliers will find the maximum of a function.
+Finding the minimum would be finding the maximum of the negated function.
+
 Now, for what this project was all about, let's apply Joe's strategy to a general example...
 \begin{eg}
 	Use the method of Lagrange multipliers to find the maximum of $2x-y$ given the following constraint:
@@ -26,4 +74,16 @@ Now, for what this project was all about, let's apply Joe's strategy to a genera
 	\end{center}
 	Also, find the point $(x, y)$ where said maximum is achieved.
 \end{eg}
-% TODO: List common, useful, and interesting applications.. including ones that are to be mentioned in the slides, since presentations will be after we turn our paper in.
+Take the partial derivatives and set the equations up:
+\begin{align*}
+	2 = \lambda (6x-4y)\\
+	-1 = \lambda (-4x+4y)\\
+	3x^2-4xy+2y^2=6
+\end{align*}
+We'll leave the algebra as an exercise to the meticulous reader.
+Here is the candidate for absolute extrema:
+\begin{align*}
+	(x, y, \lambda): \left(2, 1, \frac{1}{4}\right)
+\end{align*}
+
+Therefore, the maximum of $f$ is $\boxed{3\text{ at }(2, 1)}$.

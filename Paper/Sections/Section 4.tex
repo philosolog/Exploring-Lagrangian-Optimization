@@ -45,7 +45,30 @@ In Carl's world, ice cream parlors can be found to have a production function si
 % *: 
 \setcounter{chapter}{9}
 \chapter{Money-Mouth Face Emoji}
-If there are any constraints on the variables $L$ and $K$, like a budget, then the method of Lagrange multipliers can be utilized to find the specific quantities of capital and labor that maximizes output $Y(L, K)$ for constraint functions.
+If there are any constraints on the variables $L$ and $K$, like a budget, then the method of Lagrange multipliers can directly be utilized to find the specific quantities of capital and labor that maximizes output $Y(L, K)$ for constraint functions.
+
+In this problem, the constraint function would be the budget.
+The budget function would look something like this:
+\begin{equation}
+	30,000L + 1,500K = 100,000% ?: Proof as to why we don't need EVT/inequalities even with an inequality for maximization?
+\end{equation}
+
+If we treat L and K as nonnegative, we can see that these constraints form a closed and bounded region.
+Since $Y$ is differentiable for all combinations of nonnegative inputs, we can apply EVT to show that there does exist an absolute extrema in the bounded region.
+
+So, we can take a couple partial derivatives and set the equations up:
+\begin{align*}
+	0.35L^{-0.65}K^{0.65} = 30,000\lambda\\
+	0.65L^{0.35}K^{-0.35} = 1,500\lambda\\
+	30,000L + 1,500K = 100,000
+\end{align*}
+Solving the algebra with a calculator, we get an $(L, K)$ pair that maximizes $Y$ for the given budget:
+\begin{align*}
+	\left(1.16667, 43.33333\right)
+\end{align*}
+Because a unit of $L$ or $K$ in this example should be integers, we would round down to get the optimal combination for Carl.
+
+In the end, Carl should $\boxed{\text{hire }1\text{ worker and buy }43\text{ dispensers}}$!% ?: Naive algo.?
 % *: 
 \setcounter{chapter}{10}
 \chapter{Metonymization, Part 3}
@@ -53,9 +76,30 @@ As shown in the above example, the method of Lagrange multipliers can be applied
 
 To relate this to a more general case, here's another example!
 \begin{eg}
-	Suppose you are given a specific Cobb-Douglas function \[f(x, y) = 50x^{0.4}y^{0.6}\] where $x$ is the dollar amount spent on labor and $y$ the dollar amount spent on equipment.
+	Suppose you are given a specific Cobb-Douglas function \[f(x, y) = 50x^{0.4}y^{0.6}\] where $x$ is the amount of labor units and $y$ is the amount of equipment units.
+	You are also given that each unit of labor costs $1$ and each unit of equipment costs $1$.
 	
-	Use the method of Lagrange multipliers to determine how much should be spend on labor and how much on equipment to maximize productivity if we have a total of 1.5 million dollars to invest in labor and equipment.
+	Use the method of Lagrange multipliers to determine how much should be spend on labor and how much on equipment to maximize productivity if we have a total of $1.5$ million dollars to invest in labor and equipment.
 	
-	We believe there could be a slight logic error in the example (see Ch. 12, Concluding Remarks). But because we were given this example problem as a requirement for this paper, we kept it ad litteram.
+	We believe there could be a slight logic error in the Cobb-Douglas example that was stated as a requirement for our project (see Ch. 13).
 \end{eg}
+
+\pagebreak
+First, we set the partial derivatives of the production function equal to their $\lambda \vec{\nabla}g(...)$ counterparts, where $g(...)$ represents our constraint/budget ($x + y = 1,500,000$):
+\begin{align*}
+	50(0.4)x^{-0.6}y^{0.6} = \lambda\\
+	50(0.6)x^{0.4}y^{-0.4} = \lambda\\
+	x + y = 1,500,000
+\end{align*}
+Without showing the algebra (to keep this paper from getting any longer), the algebra concludes to the following solution:
+\begin{align*}
+	x = 600,000\\
+	y = 900,000
+\end{align*}
+Because a unit of labor or equipment costs $1$, we can maximize our Cobb-Douglas production output $f$ with $(x,y)=(600000, 900000)$.
+
+In general, the Cobb-Douglas production function is used to determine the production output of a firm, given units of labor and capital.
+This value is modified by the elasticities (efficacy of either labor or capital on the production output) of each labor and capital.
+
+In optimizing the production function with given constraints, you can find a combination of labor and capital that suffices a constraint (like a budget) while maximizing the production output for such budget.
+In conclusion, the mathematical method of Lagrange multipliers can help you perform constrained optimization on not only the Cobb-Douglas production function, but various other functions that have continuous partial derivatives.

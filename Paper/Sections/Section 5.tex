@@ -1,9 +1,61 @@
-\lesson{5}{}{The End Stuff} % Good teacher; wish I knew before. As seniors, farewell..?
+\lesson{5}{}{Concluding Remarks}
 % *: 
 \setcounter{chapter}{11}
-\chapter{Concluding Remarks}
-\large
-"Critique my \LaTeX.. and my English." - \textbf{Aaron}
+\chapter{An Important Distinction}
+Despite both being methods to find absolute extrema in $\mathbb{R}^3$, the method of Lagrange multipliers can not be classified as a "special case" of the Extreme Value Theorem (in $\mathbb{R}^3$) [3].
+This is because the constraint function that determines the bounds of the $\mathbb{R}^2$ region to search for absolute extrema may not be bounded.
+In this case, EVT will not be applicable.
 
-"Theory can only take you so far..." - \textbf{Kerem}
-% TODO: Credits, observation of max values and Gaussian Distribution, importance of EVT v. LM considerations, issues with questions
+Do note that most problems may allow for the usage of the method of Lagrange multipliers and the Extreme Value Theorem, but some problems may not.
+For example, a function with discontinuous partial derivatives on an interval may not permit the method of Lagrange multipliers, but the EVT could work to guarantee an absolute extrema for known values of the function (if it's a absolute-value, step, other piecewise, or etc.. function).
+% *: 
+\setcounter{chapter}{12}
+\chapter{A Possible Error}
+From what we researched, the Cobb-Douglas production function's two inputs are units of capital and labor. [4]
+In the problem statement for this assignment, we are given a Cobb-Douglas function in terms of $x$ and $y$ as well as "$x$ is the dollar amount spent on labor and $y$ is the dollar amount spent on equipment."
+
+Because of this inconsistency, we treated $x$ as units of labor and $y$ as units of equipment.
+
+To clear any confusion in the example we put this paper, we labeled the cost for each unit of labor and equipment to be $\$1$.
+Sorry if this problem seems a bit weirdly unrealistic due to the altered constants; we were quite confused. :pensive:
+
+Following this instruction, we used a general Cobb-Douglas production function with different constants, but implemented the budget-constraint equation as:
+\begin{align*}
+	(1)x + (1)y = 1,500,000
+\end{align*}
+% *: 
+\setcounter{chapter}{13}
+\chapter{Acknowledgements}
+The "Joe/Carl" problems and their solutions were created and written in \LaTeX\space by Aaron, but much of the content we used to assist us in understanding the Extreme Value Theorem, Lagrange multipliers, and the Cobb-Douglas production function were also helpfully compiled and explained by the other group members.
+Namely, Kerem and Oliver focused on the engineering applications of the method of Lagrange multipliers (which will be discussed in the presentation). Brennan and Jordan greatly helped with the understanding and problemsetting for the examples used to explain the method of Lagrange multipliers applied to the Cobb-Douglas production function.
+
+Oh, and Aaron had a hard time figuring out the themes to the problems, but ended up choosing the names "Joe" and "Carl" after Joseph-Louis Lagrange and Carl-Friedrich Gauss, respectively.
+\tiny
+Also, the $S$ functions were Aaron's attempted variations of the \textbf{Gauss}ian Distribution functions but nobody needs to know that (the max is the coefficient lol).
+\normalsize
+% *: 
+\setcounter{chapter}{14}
+\chapter{Bibliography}
+\small
+[1] Dawkins, P. (2024a). Extreme Value Theorem. \textit{Calculus I - minimum and maximum values.}
+\begin{changemargin}{0.55cm}{0cm}
+	https://tutorial.math.lamar.edu/classes/calcI/minmaxvalues.aspx Accessed 29 January 2024
+\end{changemargin}
+
+\vspace{\baselineskip}
+[2] Dawkins, P. (2024b). Extreme Value Theorem. \textit{Calculus III - absolute minimums and maximums.}
+\begin{changemargin}{0.55cm}{0cm}
+	https://tutorial.math.lamar.edu/classes/calciii/absoluteextrema.aspx Accessed 29 January 2024
+\end{changemargin}
+
+\vspace{\baselineskip}
+[3] paulinho. (2020, June 13). Is Lagrange multipliers and (multivariable) extreme value theorem related? \textit{Mathematics Stack Exchange.}
+\begin{changemargin}{0.55cm}{0cm}
+	https://math.stackexchange.com/questions/3717465/is-lagrange-multipliers-and-multivariable-extreme-value-theorem-related Accessed 29 January 2024
+\end{changemargin}
+
+\vspace{\baselineskip}
+[4] Cobb-Douglas production function. (n.d.). \textit{Wikiwand.}
+\begin{changemargin}{0.55cm}{0cm}
+	https://www.wikiwand.com/en/Cobb-Douglas Accessed 30 January 2024 
+\end{changemargin}

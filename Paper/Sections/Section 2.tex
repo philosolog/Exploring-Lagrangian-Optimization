@@ -25,7 +25,7 @@ Joe's satisfaction $S$ can now be represented in terms of sweetness $(s)$ and um
 \setcounter{chapter}{3}
 \chapter{Nerd Face Emoji}
 Being the second-to-highest-gold-star-sticker student in Mr. Barraza's multivariable calculus class, Joe figured that he would have to use the \textbf{Extreme Value Theorem in $\mathbb{R}^3$} to solve this problem.
-\begin{theorem}[The Extreme Value Theorem in $\mathbb{R}^3$, Paul's Online Notes]
+\begin{theorem}[The Extreme Value Theorem in $\mathbb{R}^3$ - Paul's Online Notes ${[2]}$]
 	If \(f\left( {x,y} \right)\) is continuous in some closed, bounded set \(D\) in \({\mathbb{R}^2}\) then there are points in \(D\), \(\left( {{x_1},{y_1}} \right)\) and \(\left( {{x_2},{y_2}} \right)\) so that \(f\left( {{x_1},{y_1}} \right)\) is the absolute maximum and \(f\left( {{x_2},{y_2}} \right)\) is the absolute minimum of the function in \(D\).
 \end{theorem}
 The EVT in $\mathbb{R}^3$ is similar to the EVT in $\mathbb{R}^2$ except that, in order for the theorem to apply, the inputs $(x, y)$ to a $\mathbb{R}^2$ function $f$ must exist in a closed and bounded region.
@@ -85,14 +85,23 @@ Doing a bit of algebra (or not.. for the first two relations) to find the comple
 	\item $u\geq 0\implies (4, 0)$
 	\item $s+u\leq 16\implies (8, 8)$
 \end{enumerate}
-% TODO: CORNER POINTS LMFAO UH... Also, add graphs...
-Finally, we can compare the found points' satisfaction outputs...
+Now, we must find the $S$ values for each of the corner points.
+There are 3, given the intersections that form from the bounding equations.
+We can find each point using trivial algebra, but here's a graph to help visualize this:\\
 \begin{center}
-	$S(4, 4) = 8$\\
-	$S(0, 4) = \frac{8}{\sqrt[4]{e}}\approx 6.23041$\\
-	$S(4, 0) = \frac{8}{\sqrt[4]{e}}\approx 6.23041$\\
-	$S(8, 8) = \frac{8}{\sqrt{e}}\approx 4.85225$
+	\includegraphics[scale=0.6]{evt_in_3d_graph.png}
 \end{center}
+
+Finally, we can compare the found points' satisfaction outputs...
+\begin{align*}
+	S(4, 4) &= 8\\
+	S(0, 4) = \frac{8}{\sqrt[4]{e}} &\approx 6.23041\\
+	S(4, 0) = \frac{8}{\sqrt[4]{e}} &\approx 6.23041\\
+	S(8, 8) = \frac{8}{\sqrt{e}} &\approx 4.85225\\
+	S(0, 0) = \frac{8}{\sqrt{e}} &\approx 4.85225\\
+	S(0, 16) = \frac{8}{e^\frac{5}{2}} &\approx 0.65668\\
+	S(16, 0) = \frac{8}{e^\frac{5}{2}} &\approx 0.65668\\
+\end{align*}
 
 Through all of this work, we found that Joe can still only achieve a maximum satisfaction of $8$ utils!
 
@@ -185,7 +194,14 @@ And, finally, we must compare the $f$ values for all found points:
 \end{align*}
 The amount of work that went into this problem is absurd, but that's fine. In the end, we find that the absolute minimum of $f$ is $-25$ and the absolute maximum is $5+5\sqrt{5}$, or $16.18034$.
 
-% TODO: More applications...
+This method of finding absolute extrema, given the conditions for EVT in $\mathbb{R}^3$ are held, can be used to:
+\begin{itemize}
+	\item Optimize stress and strain in $3$D engineering models,
+	\item minimize drag and minimize lift in aerodynamic designs,
+	\item and analyze historical data patterns regarding natural resource extraction and help companies locate locations with optimal resource quantities. 
+\end{itemize}
+Moreover, there are many more applications for EVT in $3$D, so long as the $2$D constrained regions of optimization are closed and bounded.
+
 Now wait a second.. what would happen if the $2$D region describing the input of the $3$D function.. is not bounded?
 Obviously, we can't apply the Extreme Value Theorem in $\mathbb{R}^3$ in this case.. unless you know how to test all possible points on an unbounded region!
 Which, unfortunately, you can't.
