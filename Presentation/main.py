@@ -34,8 +34,14 @@ class Lagrange_Multipliers_Solution(ThreeDSlide):
 class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
 		pass
-
-# *: Examples
+# *: Profit
+	class Profit_Problem(Slide):
+		def construct(self):
+			pass
+	class Profit_Solution(Slide): # TODO: Ask if a 3D version is requested?
+		def construct(self):
+			pass
+# *: Cobb-Douglas
 class Cobb_Douglas_Introduction(ThreeDSlide):
 	def construct(self):
 		pass
@@ -45,10 +51,4 @@ class Cobb_Douglas_Problem(Slide):
 class Cobb_Douglas_Solution(ThreeDSlide):
 	def construct(self):
 		pass
-class Profit_Problem(Slide):
-	def construct(self):
-		pass
-class Profit_Solution(Slide): # TODO: Ask if a 3D version is requested?
-	def construct(self):
-		pass
-	
+# *: 
