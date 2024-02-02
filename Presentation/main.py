@@ -13,23 +13,42 @@ def make_textbox(str, box):
 		return VGroup(box, text)
 
 # *: Introduction
-class Single_Variable_Optimization(ThreeDSlide):
+class EVT_in_2D_Problem(Slide):
 	def construct(self):
 		pass
-class EVT_in_3D(ThreeDSlide):
+class EVT_in_2D_Solution(Slide):
 	def construct(self):
 		pass
-class Removing_the_Bounds(ThreeDSlide):
+class EVT_in_3D_Problem(ThreeDSlide):
 	def construct(self):
 		pass
-class Deriving_the_Method(ThreeDSlide):
+class EVT_in_3D_Solution(ThreeDSlide):
+	def construct(self):
+		pass
+class Lagrange_Multipliers_Problem(ThreeDSlide):
+	def construct(self):
+		pass
+class Lagrange_Multipliers_Solution(ThreeDSlide):
+	def construct(self):
+		pass
+class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
 		pass
 
 # *: Examples
-class Cobb_Douglas(ThreeDSlide):
+class Cobb_Douglas_Introduction(ThreeDSlide):
 	def construct(self):
 		pass
-class Cobb_Douglas_Optimization(ThreeDSlide):
+class Cobb_Douglas_Problem(Slide):
 	def construct(self):
 		pass
+class Cobb_Douglas_Solution(ThreeDSlide):
+	def construct(self):
+		pass
+class Profit_Problem(Slide):
+	def construct(self):
+		pass
+class Profit_Solution(Slide): # TODO: Ask if a 3D version is requested?
+	def construct(self):
+		pass
+	
