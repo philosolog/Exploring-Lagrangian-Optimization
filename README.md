@@ -13,5 +13,5 @@ My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jada
 # Usage
 Run this in a console to compile the slides:
 ```console
-manim-slides convert test main.html -ccontrols=true --use-template template.html
+manim-slides convert Cobb_Douglas_Introduction Cobb_Douglas_Problem main.html -ccontrols=true --use-template template.html
 ```

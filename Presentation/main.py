@@ -55,11 +55,9 @@ class Cobb_Douglas_Introduction(ThreeDSlide):
 		# *: 2
 		self.next_slide()
 		self.play(FadeOut(title))
-class test(MovingCameraSlide):
+class Cobb_Douglas_Problem(MovingCameraSlide):
 	def construct(self):
 		# *: 1
-		self.next_slide()
-
 		mcdonalds = VGroup(SVGMobject("references/mcdonalds.svg").scale_to_fit_width(6).to_edge(LEFT))
 		burger_king = VGroup(SVGMobject("references/burger_king.svg").scale_to_fit_width(6).to_edge(RIGHT))
 
@@ -91,12 +89,15 @@ class test(MovingCameraSlide):
 		self.play(FadeOut(king))
 		
 		statement_box = Rectangle(width=40, height=20, fill_opacity=0, stroke_opacity=0).move_to(RIGHT*25)
-		statement = make_textbox(r"At Burger King, each employee is paid $15$ per hour and works $\$10$ hours a day. Each grill costs $\$7,300$ and lasts for $1$ year. On an average day, each unit of input produces $20$ burgers. The output elasticity of capital is $30\%$ while labor's is $70\%$.", statement_box)
+		statement = make_textbox(r"At Burger King, each employee is paid $\$15$ per hour and works $\$10$ hours a day. Each grill costs $\$7,300$ and lasts for $1$ year. On an average day, each unit of input produces $20$ burgers. The output elasticity of capital is $30\%$ while labor's is $70\%$.", statement_box)
 		question_box = Rectangle(width=20, height=10, fill_opacity=0, stroke_opacity=0).move_to(RIGHT*25+DOWN*2)
 		question = make_textbox(r"To maximize profit, how many grills and workers should this Burger King location have with their budget being $\$1.5$ million per year?", question_box, color=YELLOW)
 
 		self.play(Write(statement))
 		self.play(Write(question))
+class Cobb_Douglas_Solution(Slide):
+	def construct(self):
+		pass
 class Profit_Problem(Slide):
 	def construct(self):
 		pass

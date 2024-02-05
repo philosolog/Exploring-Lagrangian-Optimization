@@ -11,3 +11,6 @@ main_assets
 *.toc
 .obsidian
 .vscode
+
+!*.Cobb_Douglas_Introduction.mp4
+!*.Cobb_Douglas_Problem.mp4
