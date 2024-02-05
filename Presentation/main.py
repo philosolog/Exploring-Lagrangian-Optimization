@@ -1,13 +1,24 @@
 from manim import *
 from manim_slides import Slide, ThreeDSlide
 
-def make_textbox(str, box):
+class MovingCameraSlide(Slide, MovingCameraScene):
+    pass
+
+def make_textbox(str, box, **kwargs):
+		color = kwargs.get("color", None)
 		myBaseTemplate = TexTemplate(
 			documentclass="\documentclass[preview]{standalone}"
 		)
 		myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")
 
-		text = Tex("\\justifying{" + str + "}", tex_template=myBaseTemplate).scale(0.5)
+		text = Tex(
+			r"\justifying{" + str + "}",
+			tex_template=myBaseTemplate
+		).scale(0.75)
+
+		if color:
+			text.color = color
+
 		text.move_to(box)
 
 		return VGroup(box, text)
@@ -35,25 +46,57 @@ class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
 		pass
 # *: Brennan & Jordan
-class test(Slide):
-	def construct(self):
-		# *: 1
-		mcdonalds = SVGMobject("references/mcdonalds.svg").scale_to_fit_width(6).to_edge(LEFT)
-		mcdonalds_text = Tex("McDonald's").move_to(LEFT*2.5)
-		mcdonalds_text.set_color_by_gradient(YELLOW, RED)
-		burger_king = SVGMobject("references/burger_king.svg").scale_to_fit_width(6).to_edge(RIGHT)
-		burger_king_text = Tex("Burger King").move_to(RIGHT*2.5)
-		burger_king_text.set_color_by_gradient(RED, ORANGE)
-
-		self.play(Write(mcdonalds_text))
-		self.play(Write(burger_king_text))
-		# *: 2
-		self.next_slide()
-		self.play(Transform(mcdonalds_text, mcdonalds))
-		self.play(Transform(burger_king_text, burger_king))
 class Cobb_Douglas_Introduction(ThreeDSlide):
 	def construct(self):
-		pass
+		# *: 1
+		title = Text("Applications in Business")
+		self.play(Write(title))
+
+		# *: 2
+		self.next_slide()
+		self.play(FadeOut(title))
+class test(MovingCameraSlide):
+	def construct(self):
+		# *: 1
+		self.next_slide()
+
+		mcdonalds = VGroup(SVGMobject("references/mcdonalds.svg").scale_to_fit_width(6).to_edge(LEFT))
+		burger_king = VGroup(SVGMobject("references/burger_king.svg").scale_to_fit_width(6).to_edge(RIGHT))
+
+		self.play(Write(mcdonalds))
+		self.play(Write(burger_king))
+
+		# *: 2
+		self.next_slide()
+
+		ronald = ImageMobject("references/ronald.jpg").move_to(RIGHT*25).scale(1.5)
+
+		self.play(self.camera.frame.animate.move_to(ronald))
+		self.play(SpinInFromNothing(ronald))
+
+		# *: 3
+		self.next_slide(loop=True)
+		self.play(Wiggle(ronald))
+
+		# *: 4
+		self.next_slide()
+
+		king = ImageMobject("references/king.jpg").move_to(RIGHT*25).scale(1.25)
+
+		self.play(ShrinkToCenter(ronald))
+		self.play(GrowFromCenter(king))
+
+		# *: 5
+		self.next_slide()
+		self.play(FadeOut(king))
+		
+		statement_box = Rectangle(width=40, height=20, fill_opacity=0, stroke_opacity=0).move_to(RIGHT*25)
+		statement = make_textbox(r"At Burger King, each employee is paid $15$ per hour and works $\$10$ hours a day. Each grill costs $\$7,300$ and lasts for $1$ year. On an average day, each unit of input produces $20$ burgers. The output elasticity of capital is $30\%$ while labor's is $70\%$.", statement_box)
+		question_box = Rectangle(width=20, height=10, fill_opacity=0, stroke_opacity=0).move_to(RIGHT*25+DOWN*2)
+		question = make_textbox(r"To maximize profit, how many grills and workers should this Burger King location have with their budget being $\$1.5$ million per year?", question_box, color=YELLOW)
+
+		self.play(Write(statement))
+		self.play(Write(question))
 class Profit_Problem(Slide):
 	def construct(self):
 		pass
