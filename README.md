@@ -11,7 +11,8 @@ My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jada
 **† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.**
 
 # Usage
-Run this in a console to compile the slides:
+Run this in a console to compile the slides locally:
 ```console
 manim-slides convert Cobb_Douglas_Introduction Cobb_Douglas_Problem main.html -ccontrols=true --use-template template.html
 ```
+Or, visit this [Pages site](https://philosolog.github.io/Exploring-Lagrangian-Optimization-Slides/) (it might not be synced.. but it should be).

@@ -67,7 +67,7 @@ class Cobb_Douglas_Problem(MovingCameraSlide):
 		# *: 2
 		self.next_slide()
 
-		ronald = ImageMobject("references/ronald.jpg").move_to(RIGHT*25).scale(1.5)
+		ronald = ImageMobject("references/Ronald.jpg").move_to(RIGHT*25).scale(1.5)
 
 		self.play(self.camera.frame.animate.move_to(ronald))
 		self.play(SpinInFromNothing(ronald))
@@ -79,7 +79,7 @@ class Cobb_Douglas_Problem(MovingCameraSlide):
 		# *: 4
 		self.next_slide()
 
-		king = ImageMobject("references/king.jpg").move_to(RIGHT*25).scale(1.25)
+		king = ImageMobject("references/King.jpg").move_to(RIGHT*25).scale(1.25)
 
 		self.play(ShrinkToCenter(ronald))
 		self.play(GrowFromCenter(king))
