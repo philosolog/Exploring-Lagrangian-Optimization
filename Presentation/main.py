@@ -27,7 +27,7 @@ def make_textbox(str, box, **kwargs):
 class Introduction(ThreeDSlide):
 	def construct(self):
 		# *: 0
-		title_1 = Tex(r"Exploring Lagrangian Optimization\\\vfill \tiny{Aaron, Brennan, Jordan, Kerem, Oliver}", tex_template=preamble)
+		title_1 = Tex("Exploring Lagrangian Optimization\n\nAaron, Brennan, Jordan, Kerem, Oliver", tex_template=preamble)
 		
 		self.play(Write(title_1))
 
@@ -166,7 +166,7 @@ class Lagrange_Multipliers(ThreeDSlide):
 		# *: 1
 		self.next_slide()
 
-		title = Tex(r"The Method of Lagrange Multipliers", tex_template=preamble)
+		title = Tex(r"What the Fuck are Lagrange Multipliers", tex_template=preamble)
 
 		self.play(Write(title))
 
@@ -205,8 +205,8 @@ class Lagrange_Multipliers(ThreeDSlide):
 		self.play(FadeOut(e1, shift=UP))
 
 		e5 = Tex(r"$...=k$", tex_template=preamble)
-		e6 = Tex(r"...-k=0", tex_template=preamble)
-		e7 = Tex(r"...-k=g(x,y)", tex_template=preamble) # *: Dimension bump to take partial derivatives.
+		e6 = Tex(r"$...-k=0$", tex_template=preamble)
+		e7 = Tex(r"$...-k=g(x,y)$", tex_template=preamble) # *: Dimension bump to take partial derivatives.
 
 		self.play(FadeIn(e5, scale=1.5))
 		self.next_slide()
@@ -216,17 +216,34 @@ class Lagrange_Multipliers(ThreeDSlide):
 
 class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
-		pass
+		title = Text("Key Differences")
+		self.play(Write(title))
+
+		# *: 2
+		self.next_slide()
+		self.play(Unwrite(title))
+
+		nerd = SVGMobject("references/nerd.svg").scale_to_fit_width(10)
+		self.play(SpinInFromNothing(nerd))
+		self.next_slide()
+		continuous = ImageMobject("references/continuous_distribution.png").scale_to_fit_width(8)
+		self.play(FadeOut(nerd, shift=UP), FadeIn(continuous, shift=UP))
+		self.next_slide()
+		discrete = ImageMobject("references/discrete_distribution.jpg").scale_to_fit_width(8)
+		self.play(FadeOut(continuous, shift=UP), FadeIn(discrete, shift=UP))
+
 # *: Brennan & Jordan
 class Cobb_Douglas_Introduction(ThreeDSlide):
 	def construct(self):
 		# *: 1
-		title = Text("The Cobb-Douglas Production Function")
+		title = Text("Cobb-Douglas and Burgers")
 		self.play(Write(title))
 
 		# *: 2
 		self.next_slide()
 		self.play(FadeOut(title))
+
+		e1 = Tex(r"$$", tex_template=preamble)
 class Cobb_Douglas_Problem(MovingCameraSlide):
 	def construct(self):
 		# *: 1
@@ -263,7 +280,7 @@ class Cobb_Douglas_Problem(MovingCameraSlide):
 		statement_box = Rectangle(width=40, height=20, fill_opacity=0, stroke_opacity=0).move_to(RIGHT*25)
 		statement = make_textbox(r"At Burger King, each employee is paid $\$15$ per hour and works $10$ hours a day. Each grill costs $\$7,300$ and lasts for $1$ year. On an average day, each unit of input produces $20$ burgers. The output elasticity of capital is $30\%$ while labor's is $70\%$.", statement_box)
 		question_box = Rectangle(width=20, height=10, fill_opacity=0, stroke_opacity=0).move_to(RIGHT*25+DOWN*2)
-		question = make_textbox(r"To maximize profit, how many grills and workers should this Burger King location have with their budget being $\$1.5$ million per year?", question_box, color=YELLOW)
+		question = make_textbox(r"To maximize output, how many grills and workers should this Burger King location have with their budget being $\$1.5$ million per year?", question_box, color=YELLOW)
 
 		self.play(Write(statement))
 		self.play(Write(question))
@@ -271,12 +288,29 @@ class Cobb_Douglas_Solution(Slide):
 	def construct(self):
 		pass
 # *: Kerem & Oliver
-class Tank_Problem(Slide):
+class Physics_Problem(Slide):
 	def construct(self):
 		# *: 1
-		title = Text("Other Applications")
+		title = Text("Dumans")
 		self.play(Write(title))
 
 		# *: 2
 		self.next_slide()
 		self.play(FadeOut(title))
+		question_box = Rectangle(width=40, height=20, fill_opacity=0, stroke_opacity=0)
+		question = make_textbox(r"Dr. Kerem discovers a new property of an object that relates its pressure (P), volume (V), and time (t). The property is named a Duman and can be represented by the following equation: \[\mathbb{D}(P,V,t)=3P^2Vt\] Novice researcher Aaron wants to maximize the amount of Dumans he can find in his lab. Because Aaron sucks at physics, he wants to make sure that the sum of eight times the unitless pressure, six times the unitless volume, and double the amount of unitless time he uses must equal eight.", question_box)
+
+		self.play(Write(question))
+
+		self.next_slide()
+		self.play(Unwrite(question))
+
+		e5 = Tex(r"$8P+6V+2t=8$", tex_template=preamble)
+		e6 = Tex(r"$8P+6V+2t-8=0$", tex_template=preamble)
+		e7 = Tex(r"$8P+6V+2t-8=g(P,V,t)$", tex_template=preamble) # *: Dimension bump to take partial derivatives.
+
+		self.play(FadeIn(e5, scale=1.5))
+		self.next_slide()
+		self.play(Transform(e5, e6))
+		self.next_slide()
+		self.play(Transform(e5, e7))
