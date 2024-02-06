@@ -102,4 +102,3 @@ class Profit_Problem(Slide):
 	def construct(self):
 		pass
 # *: Kerem & Oliver
-		
