@@ -1,19 +1,19 @@
 from manim import *
 from manim_slides import Slide, ThreeDSlide
 
+preamble = TexTemplate(documentclass="\documentclass[preview]{standalone}")
+preamble.add_to_preamble(r"\usepackage{ragged2e}")
+preamble.add_to_preamble(r"\usepackage{amssymb}")
+
 class MovingCameraSlide(Slide, MovingCameraScene):
-    pass
+	pass
 
 def make_textbox(str, box, **kwargs):
 		color = kwargs.get("color", None)
-		myBaseTemplate = TexTemplate(
-			documentclass="\documentclass[preview]{standalone}"
-		)
-		myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")
 
 		text = Tex(
 			r"\justifying{" + str + "}",
-			tex_template=myBaseTemplate
+			tex_template=preamble
 		).scale(0.75)
 
 		if color:
@@ -24,24 +24,153 @@ def make_textbox(str, box, **kwargs):
 		return VGroup(box, text)
 
 # *: Aaron
-class EVT_in_2D_Problem(Slide):
+class Introduction(ThreeDSlide):
 	def construct(self):
-		pass
-class EVT_in_2D_Solution(Slide):
-	def construct(self):
-		pass
-class EVT_in_3D_Problem(ThreeDSlide):
-	def construct(self):
-		pass
-class EVT_in_3D_Solution(ThreeDSlide):
-	def construct(self):
-		pass
+		# *: 0
+		title_1 = Tex(r"Exploring Lagrangian Optimization\\\vfill \tiny{Aaron, Brennan, Jordan, Kerem, Oliver}", tex_template=preamble)
+		
+		self.play(Write(title_1))
+
+		# *: 1
+		self.next_slide()
+		self.play(Unwrite(title_1))
+
+		title_2 = Tex(r"The Extreme Value Theorem in $\mathbb{R}^3$ and Lagrange Multipliers", tex_template=preamble)
+		
+		self.play(Write(title_2))
+		# *: 2
+		self.next_slide()
+		self.play(FadeOut(title_2))
+
+		axes = ThreeDAxes()
+		x_label = axes.get_x_axis_label(Tex("x"))
+		y_label = axes.get_y_axis_label(Tex("y")).shift(LEFT + UP*1.6)
+		z_label = axes.get_z_axis_label(Tex("z"))
+		dot = Dot3D()
+
+		self.set_camera_orientation(phi = 90*DEGREES, theta = 0*DEGREES, distance = 1)
+
+		equation_1 = Tex(r"$z = y^2$\\$y\in [0,\frac{\pi}{2}]$")
+		equation_2 = Tex(r"$z = y^2 + \sin(x)$\\$y\in [0,\frac{\pi}{2}]$\\$x\in [0,\frac{\pi}{2}]$")
+		equation_3 = Tex(r"$z = y^2 + \sin(x)$\\$y\in [0,-x+\frac{\pi}{2}]$\\$x\in [0,\frac{\pi}{2}]$")
+		equation_1.to_corner(UL)
+		equation_2.to_corner(UL)
+		equation_3.to_corner(UL)
+		self.add_fixed_in_frame_mobjects(equation_1)
+		self.play(FadeIn(equation_1, shift=RIGHT))
+		self.play(Write(axes), FadeIn(dot), FadeIn(x_label), FadeIn(z_label))
+
+		phi, theta, focal_distance, gamma, distance_to_origin = self.camera.get_value_trackers()
+		curve_1 = ParametricFunction(
+			lambda t: np.array(
+				[
+					0,
+					t,
+					t**2
+				]
+			),
+			color = YELLOW,
+			t_range = [0, PI/2]
+		)
+
+		self.play(Write(curve_1))
+		# *: 3
+		self.next_slide()
+
+		surface_1_resolution = 8 # TODO: Increase later...
+		self.move_camera(phi = 60*DEGREES, theta = 30*DEGREES)
+
+		def surface_1_parameters(u, v):
+			x = u
+			y = v
+			z = y**2 + np.sin(x)
+			return np.array([x, y, z])
+
+		surface_1 = Surface(
+			surface_1_parameters,
+			resolution=(surface_1_resolution, surface_1_resolution),
+			v_range=[0, +PI/2],
+			u_range=[0, +PI/2]
+		)
+
+		surface_1.scale(1, about_point=ORIGIN)
+		surface_1.set_style(fill_opacity=0.5,stroke_color=WHITE)
+		self.play(FadeOut(equation_1))
+		self.add_fixed_in_frame_mobjects(equation_2)
+		self.play(FadeIn(equation_2))
+		self.play(Write(surface_1), phi.animate.set_value(30*DEGREES), theta.animate.set_value(-120*DEGREES), run_time=2)
+		self.play(FadeOut(z_label), FadeIn(y_label))
+
+		# *: 4
+		self.next_slide()
+
+		curve_2 = ParametricFunction(
+			lambda t: np.array(
+				[
+					t,
+					0,
+					np.sin(t)
+				]
+			),
+			color = YELLOW,
+			t_range = [0, PI/2]
+		)
+		curve_3 = ParametricFunction(
+			lambda t: np.array(
+				[
+					PI/2,
+					t,
+					t**2 + np.sin(PI/2)
+				]
+			),
+			color = YELLOW,
+			t_range = [0, PI/2]
+		)
+		curve_4 = ParametricFunction(
+			lambda t: np.array(
+				[
+					t,
+					PI/2,
+					(PI/2)**2 + np.sin(t)
+				]
+			),
+			color = YELLOW,
+			t_range = [0, PI/2]
+		)
+
+		self.play(Write(curve_2))
+		self.play(Write(curve_3), Write(curve_4))
+		
+		# *: 4
+		self.next_slide()
+
+		old_curve = Group(curve_3, curve_4)
+		curve_5 = ParametricFunction(
+			lambda t: np.array(
+				[
+					t,
+					-t + PI/2,
+					(-t + PI/2)**2 + np.sin(t)
+				]
+			),
+			color = YELLOW,
+			t_range = [0, PI/2]
+		)
+
+		self.play(FadeOut(equation_2))
+		self.add_fixed_in_frame_mobjects(equation_3)
+		self.play(FadeIn(equation_3))
+		self.play(Transform(old_curve, curve_5))
+
+		# *: 5
+		self.next_slide()
+		
 class Lagrange_Multipliers_Problem(ThreeDSlide):
 	def construct(self):
-		pass
-class Lagrange_Multipliers_Solution(ThreeDSlide):
-	def construct(self):
-		pass
+		# *: 1
+		self.next_slide()
+		title = Tex(r"The Method of Lagrange Multipliers", tex_template=preamble)
+		self.play(Write(title))
 class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
 		pass
@@ -49,7 +178,7 @@ class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 class Cobb_Douglas_Introduction(ThreeDSlide):
 	def construct(self):
 		# *: 1
-		title = Text("Applications in Business")
+		title = Text("The Cobb-Douglas Production Function")
 		self.play(Write(title))
 
 		# *: 2
@@ -98,7 +227,13 @@ class Cobb_Douglas_Problem(MovingCameraSlide):
 class Cobb_Douglas_Solution(Slide):
 	def construct(self):
 		pass
-class Profit_Problem(Slide):
-	def construct(self):
-		pass
 # *: Kerem & Oliver
+class Tank_Problem(Slide):
+	def construct(self):
+		# *: 1
+		title = Text("Other Applications")
+		self.play(Write(title))
+
+		# *: 2
+		self.next_slide()
+		self.play(FadeOut(title))
