@@ -161,7 +161,7 @@ class Introduction(ThreeDSlide):
 		self.add_fixed_in_frame_mobjects(equation_3)
 		self.play(FadeIn(equation_3))
 		self.play(Transform(old_curve, curve_5))
-class Lagrange_Multipliers_Problem(ThreeDSlide):
+class Lagrange_Multipliers(ThreeDSlide):
 	def construct(self):
 		# *: 1
 		self.next_slide()
@@ -195,9 +195,25 @@ class Lagrange_Multipliers_Problem(ThreeDSlide):
 		# *: 5
 		self.next_slide()
 
-		e4 = Tex(r"$f_x(x,y)=\lambda g_x(x,y)$\\$f_y=\lambda g_y(x,y)$\\$g(x,y)=k$", tex_template=preamble)
+		e4 = Tex(r"$f_x(x,y)=\lambda g_x(x,y)$\\$f_y(x,y)=\lambda g_y(x,y)$\\$g(x,y)=k$", tex_template=preamble)
 
 		self.play(Transform(e1, e4))
+
+		# *: 6
+		self.next_slide()
+
+		self.play(FadeOut(e1, shift=UP))
+
+		e5 = Tex(r"$...=k$", tex_template=preamble)
+		e6 = Tex(r"...-k=0", tex_template=preamble)
+		e7 = Tex(r"...-k=g(x,y)", tex_template=preamble) # *: Dimension bump to take partial derivatives.
+
+		self.play(FadeIn(e5, scale=1.5))
+		self.next_slide()
+		self.play(Transform(e5, e6))
+		self.next_slide()
+		self.play(Transform(e5, e7))
+
 class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
 		pass
