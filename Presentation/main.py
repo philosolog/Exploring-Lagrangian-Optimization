@@ -161,16 +161,43 @@ class Introduction(ThreeDSlide):
 		self.add_fixed_in_frame_mobjects(equation_3)
 		self.play(FadeIn(equation_3))
 		self.play(Transform(old_curve, curve_5))
-
-		# *: 5
-		self.next_slide()
-		
 class Lagrange_Multipliers_Problem(ThreeDSlide):
 	def construct(self):
 		# *: 1
 		self.next_slide()
+
 		title = Tex(r"The Method of Lagrange Multipliers", tex_template=preamble)
+
 		self.play(Write(title))
+
+		# *: 2
+		self.next_slide()
+		self.play(FadeOut(title))
+
+		e1 = Tex(r"$\nabla f(x,y)=\lambda \nabla g(x,y)$", tex_template=preamble)
+
+		self.play(FadeIn(e1, shift=UP))
+
+		# *: 3
+		self.next_slide()
+
+		e2 = Tex(r"$\langle f_x,f_y\rangle =\lambda \langle g_x,g_y\rangle$", tex_template=preamble)
+
+		self.play(Transform(e1, e2))
+
+		# *: 4
+		self.next_slide()
+
+		e3 = Tex(r"$f_x(x,y)=\lambda g_x(x,y)$\\$f_y(x,y)=\lambda g_y(x,y)$", tex_template=preamble)
+
+		self.play(Transform(e1, e3))
+
+		# *: 5
+		self.next_slide()
+
+		e4 = Tex(r"$f_x(x,y)=\lambda g_x(x,y)$\\$f_y=\lambda g_y(x,y)$\\$g(x,y)=k$", tex_template=preamble)
+
+		self.play(Transform(e1, e4))
 class Key_Differences(Slide): # *: Between when to apply EVT in 3D vs. LM.
 	def construct(self):
 		pass
