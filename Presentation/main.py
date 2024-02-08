@@ -243,7 +243,7 @@ class Cobb_Douglas_Introduction(ThreeDSlide):
 		self.next_slide()
 		self.play(FadeOut(title))
 
-		e1 = Tex(r"$$", tex_template=preamble)
+		# TODO: Add stuff here
 class Cobb_Douglas_Problem(MovingCameraSlide):
 	def construct(self):
 		# *: 1
