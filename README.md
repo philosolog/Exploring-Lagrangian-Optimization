@@ -12,7 +12,7 @@ My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jada
 
 # Usage
 ## Paper
-Check out our completed paper assignment [here](https://github.com/philosolog/Exploring-Lagrangian-Optimization/blob/main/Paper/Wrapper.pdf)! 
+Check out our LaTeX-compiled completed paper assignment [here](https://github.com/philosolog/Exploring-Lagrangian-Optimization/blob/main/Paper/Wrapper.pdf)! 
 ## Presentation
 Run this in a console to compile the slides locally:
 ```console
