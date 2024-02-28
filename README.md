@@ -11,7 +11,9 @@ My team ([Brennan](https://github.com/Brensum), [Jordan](https://github.com/Jada
 **† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.**
 
 # Usage
+## Paper
 Check out our completed paper assignment [here](https://github.com/philosolog/Exploring-Lagrangian-Optimization/blob/main/Paper/Wrapper.pdf)! 
+## Presentation
 Run this in a console to compile the slides locally:
 ```console
 manim-slides convert Introduction Lagrange_Multipliers Key_Differences Cobb_Douglas_Introduction Cobb_Douglas_Problem Physics_Problem main.html -ccontrols=true --use-template template.html
