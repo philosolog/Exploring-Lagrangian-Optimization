@@ -18,4 +18,5 @@ Run this in a console to compile the slides locally:
 ```console
 manim-slides convert Introduction Lagrange_Multipliers Key_Differences Cobb_Douglas_Introduction Cobb_Douglas_Problem Physics_Problem main.html -ccontrols=true --use-template template.html
 ```
-Or, visit this [Pages site](https://philosolog.github.io/Exploring-Lagrangian-Optimization-Slides/) (it might not be synced.. but it should be).
+~~Or, visit this [Pages site](https://philosolog.github.io/Exploring-Lagrangian-Optimization-Slides/) (it might not be synced.. but it should be).~~
+**The online version of the slides is currently being worked on!**
