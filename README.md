@@ -1,18 +1,18 @@
 <div align="center">
 	<img src="assets/logo.png" alt="logo" width="200" height="auto" />
-	<h1>Calculus Resources</h1>
+	<h1>Exploring Lagrangian Optimization</h1>
 	<p>
 		<a href="">
-			<img src="https://img.shields.io/github/last-commit/philosolog/calculus-resources" alt="last update" />
+			<img src="https://img.shields.io/github/last-commit/philosolog/exploring-lagrangian-optimization" alt="last update" />
 		</a>
-		<a href="https://github.com/philosolog/calculus-resources/stargazers">
-			<img src="https://img.shields.io/github/stars/philosolog/calculus-resources" alt="stars" />
+		<a href="https://github.com/philosolog/exploring-lagrangian-optimization/stargazers">
+			<img src="https://img.shields.io/github/stars/philosolog/exploring-lagrangian-optimization" alt="stars" />
 		</a>
-		<a href="https://github.com/philosolog/calculus-resources/issues/">
-			<img src="https://img.shields.io/github/issues/philosolog/calculus-resources" alt="open issues" />
+		<a href="https://github.com/philosolog/exploring-lagrangian-optimization/issues/">
+			<img src="https://img.shields.io/github/issues/philosolog/exploring-lagrangian-optimization" alt="open issues" />
 		</a>
-		<a href="https://github.com/philosolog/calculus-resources/blob/master/LICENSE">
-			<img src="https://img.shields.io/github/license/philosolog/calculus-resources.svg" alt="license" />
+		<a href="https://github.com/philosolog/exploring-lagrangian-optimization/blob/master/LICENSE">
+			<img src="https://img.shields.io/github/license/philosolog/exploring-lagrangian-optimization.svg" alt="license" />
 		</a>
 	</p>
 </div>
