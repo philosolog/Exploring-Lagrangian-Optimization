@@ -11,3 +11,4 @@ main_assets
 *.toc
 .obsidian
 .vscode
+/.mypy_cache

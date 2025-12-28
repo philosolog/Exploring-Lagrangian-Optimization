@@ -1,40 +1,26 @@
-<div align="center">
-	<img src="assets/logo.png" alt="logo" width="200" height="auto" />
-	<h1>Exploring Lagrangian Optimization</h1>
-	<p>
-		<a href="">
-			<img src="https://img.shields.io/github/last-commit/philosolog/exploring-lagrangian-optimization" alt="last update" />
-		</a>
-		<a href="https://github.com/philosolog/exploring-lagrangian-optimization/stargazers">
-			<img src="https://img.shields.io/github/stars/philosolog/exploring-lagrangian-optimization" alt="stars" />
-		</a>
-		<a href="https://github.com/philosolog/exploring-lagrangian-optimization/issues/">
-			<img src="https://img.shields.io/github/issues/philosolog/exploring-lagrangian-optimization" alt="open issues" />
-		</a>
-		<a href="https://github.com/philosolog/exploring-lagrangian-optimization/blob/master/LICENSE">
-			<img src="https://img.shields.io/github/license/philosolog/exploring-lagrangian-optimization.svg" alt="license" />
-		</a>
-	</p>
-</div>
+# Exploring Lagrangian Optimization
 
-# What's this?
-A **compilation of resources** for my multivariable calculus class' final project: *a research† experience where students must design a lesson plan on a math topic and present it to the class*.
+This repository contains the final project I completed for a multivariable calculus course. The goal was to study constrained optimization through self-directed research, produce a written report, and present the material to the class.
 
-To complete the assignment, students may form groups to:
-- self-study a topic in mathematics,
-- produce a written document exploring the topic,
-- and develop a presentation for the class.
+The paper is not intended for formal journal publication, it instead documents our learning and presentation materials.
 
-A couple of classmates and I decided to explore the mechanics and applications of Lagrangian functions and Lagrange multipliers. I decided to use GitHub for its repository version control and device syncing.
+## Project focus:
+- Topic: constrained optimization using Lagrange multipliers
+- Approach: derive the theory, work through worked examples, compare methods
+- Examples included: Cobb-Douglas optimization (economics), a constrained physics problem, and classroom-friendly demonstrations
 
-**† By "research," we refer to the self-education used to assist us in creating a presentation for our class- in no way do we intend to publish a math paper.**
+## Contents and artifacts
+- **Paper:** LaTeX source in `paper/` and compiled PDF at `paper/wrapper.pdf`.
+- **Presentation:** slides and web presentation in `presentation/` (HTML + source). The slide sources live in `presentation/` and `presentation/template.html` is the template.
+- **References and notes:** `paper/references/` and `paper/sections/` contain supporting material and section files.
 
-## Usage
-### Paper
-Check out our LaTeX-compiled completed paper [here](https://github.com/philosolog/Exploring-Lagrangian-Optimization/blob/main/Paper/Wrapper.pdf)! 
-### Presentation
-Run this in a console to compile the slides locally:
-```console
-manim-slides convert Introduction Lagrange_Multipliers Key_Differences Cobb_Douglas_Introduction Cobb_Douglas_Problem Physics_Problem main.html -ccontrols=true --use-template template.html
+## Build & usage notes
+- Build the paper (requires a TeX distribution such as TeX Live or MiKTeX):
+```sh
+latexmk -pdf paper/wrapper.tex
 ```
-Or, visit this [Pages site](https://philosolog.github.io/Exploring-Lagrangian-Optimization-Slides/) (it might not be synced.. but it should be).
+or run `pdflatex` / `bibtex` as needed until references compile.
+- Serve or build the slides (from [manim-slides](https://manim-slides.eertmans.be/latest/quickstart.html)):
+```sh
+manim-slides convert Introduction Lagrange_Multipliers Key_Differences Cobb_Douglas_Introduction Cobb_Douglas_Problem Physics_Problem main.html --use-template template.html
+```
