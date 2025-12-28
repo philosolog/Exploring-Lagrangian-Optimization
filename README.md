@@ -1,6 +1,6 @@
 # Exploring Lagrangian Optimization
 
-This repository contains the final project I completed for a multivariable calculus course. The goal was to study constrained optimization through self-directed research, produce a written report, and present the material to the class.
+This repository contains the final project I completed for a high school multivariable calculus course. The goal was to study constrained optimization through self-directed research, produce a written report, and present the material to the class.
 
 The paper is not intended for formal journal publication, it instead documents our learning and presentation materials.
 
